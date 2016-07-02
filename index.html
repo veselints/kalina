@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> </title>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.common-nova.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.nova.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.default.mobile.min.css" />
+    <style type="text/css" media="screen">
+    @import url(https://fonts.googleapis.com/css?family=Raleway:200);
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .header-name {
+        padding: 40px 10px 30px;
+        font-weight: 100;
+        font-size: 36px;
+        margin: 0 30px;
+        border-bottom: 0.5px solid #DDD;
+    }
+    
+    .header-name span {
+        font-weight: 900;
+    }
+    
+    nav {
+        margin: 0 30px;
+    }
+    
+    nav .k-menu .k-item {
+        width: 150px;
+    }
+    /*    #listView {
+        display: flex;
+        flex-wrap: wrap;
+    }*/
+    
+    .main {
+        text-align: center;
+    }
+    
+    .main .work-container {
+        margin: 50px auto;
+        display: inline-block;
+        text-align: left;
+    }
+    
+    .main .work-container .image {
+        border: 0.5px solid #DDD;
+    }
+
+    .main .work-container .name {
+        padding-bottom: 20px;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%
+    }
+    
+    footer .footer-text {
+        text-align: right;
+        padding: 20px 10px;
+        margin: 0 30px;
+        border-top: 0.5px solid #DDD;
+        color: #DDD;
+    }
+    
+    footer .footer-text .link {
+        text-decoration: none;
+    }
+    </style>
+    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-name">
+            Kalina Kraleva
+            <span>
+            	//
+            </span>
+        </h1>
+        <nav>
+            <ul id="menu">
+                <li>
+                    Graphics
+                </li>
+                <li>
+                    Watercolor
+                </li>
+                <li>
+                    The Author
+                </li>
+                <li>
+                    Contacts
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="work-container">
+            <img class="image" src="" alt="">
+            <h3 class="name"></h3>
+        </div>
+        <!-- <div id="listView"></div> -->
+    </main>
+    <footer>
+        <p class="footer-text">
+            <a class="link" href="https://github.com/veselints" "Veselin Tsvetanov">&copy; veselints</a>
+        </p>
+    </footer>
+    <script type="text/x-kendo-template" id="template">
+        <div class="work">
+            <img src="#= url #" alt="#: name #" />
+            <h3>#:name#</h3>
+        </div>
+    </script>
+    <script>
+    $(document).ready(function() {
+        $("#menu").kendoMenu();
+        var index = 1;
+
+        var works = [{
+            name: 'Mondrian',
+            url: 'http://www.delphineaparis.com/sites/www.delphineaparis.com/files/mondrian_1.jpg'
+        }, {
+            name: 'Klee',
+            url: 'http://www.metmuseum.org/toah/images/h5/h5_1987.455.1.jpg'
+        }, {
+            name: 'Klee',
+            url: 'https://dl.airtable.com/tbKNvwPURJGlGLtc8vG7_08-00571.jpg'
+        }, {
+            name: 'Klee',
+            url: 'http://www.metmuseum.org/toah/images/h5/h5_1984.315.42.jpg'
+        }, {
+            name: 'Klee',
+            url: 'http://i.telegraph.co.uk/multimedia/archive/02701/klee_2701723b.jpg'
+        }];
+
+        $('.image').attr('src', works[0].url);
+        $('.name').html(works[0].name);
+
+        window.setInterval(function() {
+
+            $('.work-container').fadeOut(800, function() {
+                $('.image').attr('src', works[index].url);
+                $('.name').html(works[index].name);
+
+                if (index < works.length - 1) {
+                    index += 1;
+                } else {
+                    index = 0;
+                }
+
+                setTimeout(function() {
+                    $('.work-container').fadeIn(800);
+                }, 300);
+            });
+
+        }, 7000);
+
+
+
+
+
+        // var dataSource = new kendo.data.DataSource({
+        //     data: works,
+        //     pageSize: 21
+        // });
+
+        // $("#listView").kendoListView({
+        //     dataSource: dataSource,
+        //     template: kendo.template($("#template").html())
+        // });
+    });
+    </script>
+</body>
+
+</html>
