@@ -22,6 +22,11 @@
         font-family: 'Raleway', sans-serif;
     }
     
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
     .header-name {
         padding: 40px 10px 30px;
         font-weight: 100;
@@ -41,10 +46,6 @@
     nav .k-menu .k-item {
         width: 150px;
     }
-    /*    #listView {
-        display: flex;
-        flex-wrap: wrap;
-    }*/
     
     .main {
         text-align: center;
@@ -54,6 +55,7 @@
         margin: 50px auto;
         display: inline-block;
         text-align: left;
+        padding-bottom: 20px;
     }
     
     .main .work-container .image {
@@ -61,7 +63,21 @@
     }
     
     .main .work-container .name {
-        padding-bottom: 20px;
+        font-style: italic;
+    }
+    
+    .main .k-listview {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+    
+    .main .k-listview .work-container {
+        padding: 100px 100px 50px;
+        margin: 50px auto 100px;
+        border: 0.5px solid #DDD;
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 0 10px 1px rgb(200, 200, 200);
     }
     
     footer {
@@ -77,10 +93,6 @@
         border-top: 0.5px solid #DDD;
         color: #DDD;
     }
-    
-    footer .footer-text .link {
-        text-decoration: none;
-    }
     </style>
     <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
     <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
@@ -89,21 +101,19 @@
 <body>
     <header>
         <h1 class="header-name">
-            Kalina Kraleva
-            <span>
-            	//
-            </span>
+        	<a href="./index.html" "Home">
+        		Kalina Kraleva
+            	<span>
+            		//
+            	</span>
+            </a>
         </h1>
         <nav>
             <ul id="menu"></ul>
         </nav>
     </header>
     <main class="main">
-        <div class="work-container">
-            <img class="image" src="" alt="">
-            <h3 class="name"></h3>
-        </div>
-        <!-- <div id="listView"></div> -->
+        <div id="listView"></div>
     </main>
     <footer>
         <p class="footer-text">
@@ -111,9 +121,11 @@
         </p>
     </footer>
     <script type="text/x-kendo-template" id="template">
-        <div class="work">
+        <div class="work-container">
             <img src="#= url #" alt="#: name #" />
-            <h3>#:name#</h3>
+            <h3 class="name">#:name#</h3>
+            <p class="technique">#:technique#</p>
+            <p class="year">#:year#</p>
         </div>
     </script>
     <script>
@@ -139,8 +151,6 @@
                 url: "#"
             }]
         });
-
-        var index = 1;
 
         var works = [{
             name: 'Mondrian',
@@ -169,37 +179,46 @@
             year: '2016'
         }];
 
-        $('.image').attr('src', works[0].url);
-        $('.name').html(works[0].name);
+        var dataSource = new kendo.data.DataSource({
+            data: works,
+            pageSize: 21
+        });
 
-        window.setInterval(function() {
+        $("#listView").kendoListView({
+            dataSource: dataSource,
+            template: kendo.template($("#template").html())
+        });
 
-            $('.work-container').fadeOut(800, function() {
-                $('.image').attr('src', works[index].url);
-                $('.name').html(works[index].name);
+        var lastScrollTop = 0;
+        var visibleWork = 0;
+        var numberOfWOrks = 4;
+        var shouldScroll = true;
 
-                if (index < works.length - 1) {
-                    index += 1;
+        window.addEventListener("wheel", function() {
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function() {
+                var st = $(this).scrollTop();
+                var target;
+                if (st > lastScrollTop) {
+                    if (visibleWork < numberOfWOrks) {
+                        visibleWork += 1;
+                        target = $('.work-container')[visibleWork];
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top - 100
+                        }, 1000);
+                    }
                 } else {
-                    index = 0;
+                    if (visibleWork > 0) {
+                        visibleWork -= 1;
+                        target = $('.work-container')[visibleWork];
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top - 100
+                        }, 1000);
+                    }
                 }
-
-                setTimeout(function() {
-                    $('.work-container').fadeIn(800);
-                }, 300);
-            });
-
-        }, 7000);
-
-        // var dataSource = new kendo.data.DataSource({
-        //     data: works,
-        //     pageSize: 21
-        // });
-
-        // $("#listView").kendoListView({
-        //     dataSource: dataSource,
-        //     template: kendo.template($("#template").html())
-        // });
+                lastScrollTop = st;
+            }, 100));
+        });
     });
     </script>
 </body>
