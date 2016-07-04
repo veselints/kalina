@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:200);
-
 html,
 body {
     width: 100%;
@@ -17,6 +16,15 @@ a {
     color: black;
 }
 
+// .clearfix:after {
+//     visibility: hidden;
+//     display: block;
+//     font-size: 0;
+//     content: " ";
+//     clear: both;
+//     height: 0;
+// }
+
 .header-name {
     padding: 40px 10px 30px;
     font-weight: 100;
@@ -31,19 +39,33 @@ a {
 
 nav {
     margin: 0 30px;
+    display: inline-block;
+    position: relative;
 }
 
-nav .k-menu .k-item {
+nav .k-widget.k-menu-horizontal>.k-item {
     width: 150px;
+    border-bottom: 2px solid transparent;
+}
+
+nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
+    border-bottom-color: #E99;
+    color: #E99;
+}
+
+.search {
+    position: absolute;
+    top: 125px;
+    right: 30px;
 }
 
 .main {
     text-align: center;
-    min-height: 725px;
+    min-height: 720px;
 }
 
 .main .work-container {
-    margin: 45px auto;
+    margin: 40px auto;
     display: inline-block;
     text-align: left;
 }

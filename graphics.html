@@ -5,12 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
-    
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.common-nova.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.nova.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.default.mobile.min.css" />
     <link rel="stylesheet" href="./styles.css" />
-
     <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
     <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
 </head>
@@ -28,9 +26,14 @@
         <nav>
             <ul id="menu"></ul>
         </nav>
+        <div class="search">
+            <input type="text" class="k-textbox" id="search" placeholder="Find work..." />
+        </div>
     </header>
     <main class="main">
-        <div id="listView"></div>
+        <!-- <div id="listView"></div> -->
+        <div data-role="listview" data-template="template" data-bind="source: works">
+        </div>
     </main>
     <footer>
         <p class="footer-text">
@@ -96,46 +99,59 @@
             year: '2016'
         }];
 
-        var dataSource = new kendo.data.DataSource({
-            data: works,
-            pageSize: 21
+        var viewModel = kendo.observable({
+            works: new kendo.data.DataSource({
+                data: works,
+                pageSize: 21
+            })
         });
 
-        $("#listView").kendoListView({
-            dataSource: dataSource,
-            template: kendo.template($("#template").html())
-        });
+        kendo.bind($(".main"), viewModel);
 
-        var lastScrollTop = 0;
-        var visibleWork = 0;
-        var numberOfWOrks = 4;
-        var shouldScroll = true;
-
-        window.addEventListener("wheel", function() {
-            clearTimeout($.data(this, 'scrollTimer'));
-            $.data(this, 'scrollTimer', setTimeout(function() {
-                var st = $(this).scrollTop();
-                var target;
-                if (st > lastScrollTop) {
-                    if (visibleWork < numberOfWOrks) {
-                        visibleWork += 1;
-                        target = $('.work-container')[visibleWork];
-                        $('html, body').animate({
-                            scrollTop: $(target).offset().top - 100
-                        }, 1000);
-                    }
-                } else {
-                    if (visibleWork > 0) {
-                        visibleWork -= 1;
-                        target = $('.work-container')[visibleWork];
-                        $('html, body').animate({
-                            scrollTop: $(target).offset().top - 100
-                        }, 1000);
-                    }
+        $('#search').on('input', function(e) {
+            var newWorks = [];
+            var searchText = e.target.value.toLowerCase();
+            for (var i = 0; i < works.length; i++) {
+            	var currentWork = works[i];
+                if (currentWork.name.toLowerCase().indexOf(searchText) > -1 || 
+                		currentWork.year.indexOf(searchText) > -1) {
+                    newWorks.push(works[i]);
                 }
-                lastScrollTop = st;
-            }, 100));
+            }
+
+            viewModel.set('works', newWorks);
         });
+
+        // var lastScrollTop = 0;
+        // var visibleWork = 0;
+        // var numberOfWOrks = 4;
+        // var shouldScroll = true;
+
+        // window.addEventListener("wheel", function() {
+        //     clearTimeout($.data(this, 'scrollTimer'));
+        //     $.data(this, 'scrollTimer', setTimeout(function() {
+        //         var st = $(this).scrollTop();
+        //         var target;
+        //         if (st > lastScrollTop) {
+        //             if (visibleWork < numberOfWOrks) {
+        //                 visibleWork += 1;
+        //                 target = $('.work-container')[visibleWork];
+        //                 $('html, body').animate({
+        //                     scrollTop: $(target).offset().top - 100
+        //                 }, 1000);
+        //             }
+        //         } else {
+        //             if (visibleWork > 0) {
+        //                 visibleWork -= 1;
+        //                 target = $('.work-container')[visibleWork];
+        //                 $('html, body').animate({
+        //                     scrollTop: $(target).offset().top - 100
+        //                 }, 1000);
+        //             }
+        //         }
+        //         lastScrollTop = st;
+        //     }, 100));
+        // });
     });
     </script>
 </body>
