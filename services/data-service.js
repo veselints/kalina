@@ -54,6 +54,6 @@
         };
     }
 
-    angular.module('theStyleApp.services')
+    angular.module('kalinaApp.services')
         .factory('data', ['$http', '$q', 'baseServiceUrl', data]);
 }());

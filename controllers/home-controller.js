@@ -1,64 +1,28 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    function HomeController(posts, $location) {
-        var vm = this;
-        var locationObject = $location.search();
-        var pageNumber = Number(locationObject.page) || 1;
+  function HomeController(worksService, $location, $interval, $timeout) {
+    var vm = this;
 
-        var width = $(document).width();
-        var ratio = window.devicePixelRatio;
-        if (width/ratio < 900) {
-            $('.site-navigation').removeClass('visible-navigation');
-            $('.site-navigation').addClass('hidden-navigation');
-        }
+    vm.showWork = false;
+    var changedWork = worksService.getCurrentWork();
+    vm.currentImageUrl = changedWork.url;
+    vm.currentImageName = changedWork.name;
+    vm.showWork = true;
 
-        posts.getLatest(pageNumber)
-            .then(function(postsResult) {
-                vm.latestElevenPosts = postsResult.posts;
-                var numberOfPosts = postsResult.count;
+    $interval(function() {
+      vm.showWork = false;
+      var newWork = worksService.getCurrentWork();
+      vm.currentImageUrl = newWork.url;
+      vm.currentImageName = newWork.name;
+      $timeout(function() {
+        $timeout(function() {
+          vm.showWork = true;
+        }, 300);
+      }, 1000);
+    }, 7000);
+  }
 
-                var currentNumberOfPages = Math.floor(numberOfPosts / 11);
-                if (numberOfPosts % 11 !== 0) {
-                    currentNumberOfPages++;
-                }
-
-                if (currentNumberOfPages < 2) {
-                    vm.showPagination = false;
-                } else {
-                    vm.showPagination = true;
-                }
-
-                vm.pages = [];
-                var selected = null;
-
-                for (var i = 1; i <= currentNumberOfPages; i++) {
-                    if (i == pageNumber) {
-                        selected = 'selectedPaginationNumber';
-                    }
-
-                    vm.pages.push({
-                        selected: selected,
-                        num: i
-                    });
-
-                    selected = null;
-                }
-
-                if (pageNumber > 1) {
-                    vm.previousPage = pageNumber - 1;
-                } else {
-                    vm.previousPage = 1;
-                }
-
-                if (pageNumber < currentNumberOfPages) {
-                    vm.nextPage = pageNumber + 1;
-                } else {
-                    vm.nextPage = currentNumberOfPages;
-                }
-            });
-    }
-
-    angular.module('theStyleApp.controllers')
-        .controller('HomeController', ['posts', '$location', HomeController]);
+  angular.module('kalinaApp.controllers')
+    .controller('HomeController', ['worksService', '$location', '$interval', '$timeout', HomeController]);
 }());

@@ -5,17 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
+    <!-- Loading styles -->
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.common-nova.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.nova.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.default.mobile.min.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
-    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
-    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
 </head>
 
-<body>
+<body ng-app="kalinaApp" ng-cloak>
+    <!-- Header -->
     <header>
         <h1 class="header-name">
             Kalina Kraleva
@@ -30,23 +28,30 @@
             <input type="text" class="k-textbox" id="search" placeholder="Find work..." />
         </div>
     </header>
+    <!-- Main content -->
     <main class="main">
-        <div class="work-container">
-            <img class="image" src="" alt="">
-            <h3 class="name"></h3>
+        <div ng-view>
         </div>
     </main>
+    <!-- Footer -->
     <footer>
         <p class="footer-text">
             <a class="link" href="https://github.com/veselints" "Veselin Tsvetanov">&copy; veselints</a>
         </p>
     </footer>
-    <script type="text/x-kendo-template" id="template">
-        <div class="work">
-            <img src="#= url #" alt="#: name #" />
-            <h3>#:name#</h3>
-        </div>
-    </script>
+    <!-- Loding libs -->
+    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
+    <!-- Loading app -->
+    <script src="app.js"></script>
+    <!-- Loading controllers -->
+    <script src="controllers/home-controller.js"></script>
+    <!-- Loading services -->
+    <script src="services/works-service.js"></script>
+    <script src="services/data-service.js"></script>
     <script>
     $(document).ready(function() {
         $("#menu").kendoMenu({
@@ -74,60 +79,9 @@
             }
         });
 
-        var index = 1;
-
-        var works = [{
-            name: 'Mondrian',
-            url: 'http://www.delphineaparis.com/sites/www.delphineaparis.com/files/mondrian_1.jpg',
-            technique: 'Water clolor',
-            year: '2015'
-        }, {
-            name: 'The free fly',
-            url: 'http://www.metmuseum.org/toah/images/h5/h5_1987.455.1.jpg',
-            technique: 'Water clolor',
-            year: '2012'
-        }, {
-            name: 'Over the borders',
-            url: 'https://dl.airtable.com/tbKNvwPURJGlGLtc8vG7_08-00571.jpg',
-            technique: 'Water clolor',
-            year: '2014'
-        }, {
-            name: 'Within our thoughts',
-            url: 'http://www.metmuseum.org/toah/images/h5/h5_1984.315.42.jpg',
-            technique: 'Free graphics',
-            year: '2012'
-        }, {
-            name: 'Poetry is free',
-            url: 'http://i.telegraph.co.uk/multimedia/archive/02701/klee_2701723b.jpg',
-            technique: 'Water clolor',
-            year: '2016'
-        }];
-
         $('#search').on('input', function(e) {
             window.location.replace('./graphics.html');
         });
-
-        $('.image').attr('src', works[0].url);
-        $('.name').html(works[0].name);
-
-        window.setInterval(function() {
-
-            $('.work-container').fadeOut(800, function() {
-                $('.image').attr('src', works[index].url);
-                $('.name').html(works[index].name);
-
-                if (index < works.length - 1) {
-                    index += 1;
-                } else {
-                    index = 0;
-                }
-
-                setTimeout(function() {
-                    $('.work-container').fadeIn(800);
-                }, 300);
-            });
-
-        }, 7000);
     });
     </script>
 </body>
