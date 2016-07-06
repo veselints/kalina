@@ -1,13 +1,12 @@
 (function() {
     'use strict';
 
-    function WorksController(posts, $routeParams) {
+    function WorksController(worksService, $routeParams) {
         var vm = this;
-        var currentId = $routeParams.text;
-
-        
+        var currentCategory = $routeParams.category;
+        vm.works = worksService.getWorksByCategory(currentCategory);
     }
 
     angular.module('kalinaApp.controllers')
-        .controller('WorksController', ['$routeParams', WorksController]);
+        .controller('WorksController', ['worksService', '$routeParams', WorksController]);
 }());

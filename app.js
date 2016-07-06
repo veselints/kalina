@@ -11,11 +11,11 @@
                 controller: 'HomeController',
                 controllerAs: CONTROLLER_AS_VM
             })
-            // .when('/works/:text', {
-            //     templateUrl: PARTIALS_PREFIX + 'works.html',
-            //     controller: 'WorksController',
-            //     controllerAs: CONTROLLER_AS_VM
-            // })
+            .when('/works/:category', {
+                templateUrl: PARTIALS_PREFIX + 'works.html',
+                controller: 'WorksController',
+                controllerAs: CONTROLLER_AS_VM
+            })
             .otherwise({ redirectTo: '/' });
     }
 

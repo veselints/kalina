@@ -16,10 +16,12 @@
     <!-- Header -->
     <header>
         <h1 class="header-name">
-            Kalina Kraleva
-            <span>
-                //
-            </span>
+            <a href="#/home">
+                Kalina Kraleva
+                <span>
+                    //
+                </span>
+            </a>
         </h1>
         <nav>
             <ul id="menu"></ul>
@@ -49,6 +51,7 @@
     <script src="app.js"></script>
     <!-- Loading controllers -->
     <script src="controllers/home-controller.js"></script>
+    <script src="controllers/works-controller.js"></script>
     <!-- Loading services -->
     <script src="services/works-service.js"></script>
     <script src="services/data-service.js"></script>
@@ -57,21 +60,22 @@
         $("#menu").kendoMenu({
             dataSource: [{
                 text: "Free Graphics",
-                url: "./graphics.html"
+                url: "#/works/graphics"
             }, {
-                text: "Ex Libris"
+                text: "Ex Libris",
+                url: "#/works/exlibris"
             }, {
                 text: "Water Colour",
-                url: "./graphics.html"
+                url: "#/works/watercolour"
             }, {
                 text: "Drawings",
-                url: "./graphics.html"
+                url: "#/works/drawings"
             }, {
                 text: "The Process",
-                url: "#"
+                url: "#/theprocess"
             }, {
                 text: "The Artist",
-                url: "#"
+                url: "#/theartist"
             }],
             select: function(e) {
                 $('.activeMenuItem').removeClass('activeMenuItem');
