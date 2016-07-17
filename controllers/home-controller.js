@@ -10,6 +10,7 @@
     vm.currentImageName = changedWork.name;
     vm.showWork = true;
 
+    // I should check how to terminate this call when going to another controller
     $interval(function() {
       vm.showWork = false;
       var newWork = worksService.getCurrentWork();

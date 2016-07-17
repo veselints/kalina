@@ -171,9 +171,25 @@
        return worksResult;
     }
 
+    function getWorksBySearch(searchText) {
+      var worksResult = [];
+      var text = searchText.toLowerCase();
+      for (var i = 0; i < works.length; i++) {
+         var currentWork = works[i];
+         if (currentWork.category.toLowerCase().indexOf(text) > -1 ||
+          currentWork.name.toLowerCase().indexOf(text) > -1 ||
+          currentWork.year.toLowerCase().indexOf(text) > -1){
+            worksResult.push(currentWork);
+         }
+       }
+
+       return worksResult;
+    }
+
     return {
       getCurrentWork: getCurrentWork,
-      getWorksByCategory: getWorksByCategory
+      getWorksByCategory: getWorksByCategory,
+      getWorksBySearch: getWorksBySearch
     };
   }
 

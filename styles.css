@@ -79,7 +79,6 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
 
 .main {
     text-align: center;
-    min-height: 720px;
 }
 
 .main .work-container {
@@ -121,8 +120,12 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
 .main .name {
     font-style: italic;
 }
-
-
+ 
+.no-works-message {
+    font-size: 36px;
+    padding-top: 150px;
+    height: 52vh;
+}
 
 footer {
     width: 100%

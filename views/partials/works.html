@@ -1,4 +1,5 @@
 <div class=".k-listview">
+	<p class="no-works-message" ng-hide={{(vm.hasWorks)}}>No works fownd.</p>
     <div ng-repeat="work in vm.works">
         <div class="work-container">
             <img ng-src="{{work.url}}" alt="{{work.name}}" />

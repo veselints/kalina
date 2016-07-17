@@ -16,6 +16,11 @@
                 controller: 'WorksController',
                 controllerAs: CONTROLLER_AS_VM
             })
+            .when('/search/:text', {
+                templateUrl: PARTIALS_PREFIX + 'works.html',
+                controller: 'SearchController',
+                controllerAs: CONTROLLER_AS_VM
+            })
             .otherwise({ redirectTo: '/' });
     }
 
