@@ -86,33 +86,43 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
     margin: 40px auto;
     display: inline-block;
     text-align: left;
+    height: 60vh;
 }
 
-.main .k-listview .work-container {
-    padding-bottom: 20px;
-}
-
-.main .work-container .image {
+.main .worksView .work-container {
+    padding: 50px 50px 20px 50px;
+    margin: 35px auto;
     border: 0.5px solid #DDD;
+    // background-color: rgb(245, 245, 245);
+    box-shadow: 0 0 10px 1px rgb(200, 200, 200);
+    width: 65vw;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-.main .work-container .name {
+.main .worksView>p {
+    vertical-align: middle;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 0 5px 0.5px rgb(200, 200, 200);
+    display: inline-block;
+    width: 80px;
+    cursor: pointer;
+}
+
+.main .worksView .work-container .work-image {
+    height:45vh;
+    width:100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main .name {
     font-style: italic;
 }
 
-.main .k-listview {
-    display: flex;
-    flex-direction: column;
-    border: none;
-}
 
-.main .k-listview .work-container {
-    padding: 100px 100px 50px;
-    margin: 50px auto 100px;
-    border: 0.5px solid #DDD;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0 0 10px 1px rgb(200, 200, 200);
-}
 
 footer {
     width: 100%

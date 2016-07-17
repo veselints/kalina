@@ -1,0 +1,12 @@
+<div class="worksView">
+    <p ng-click="vm.openPrev()">previous</p>
+    <div class="work-container" ng-click="vm.openNext()">
+        <div class="inner-work-container fade" ng-if="vm.showWork">
+            <div class="work-image" style="background-image: url({{vm.currentWork.url}});"></div>
+            <h3 class="name">{{vm.currentWork.name}}</h3>
+            <p class="technique">{{vm.currentWork.technique}}</p>
+            <p class="year">{{vm.currentWork.year}}</p>
+        </div>
+    </div>
+    <p ng-click="vm.openNext()">next</p>
+</div>

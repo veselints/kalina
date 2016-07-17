@@ -12,7 +12,7 @@
                 controllerAs: CONTROLLER_AS_VM
             })
             .when('/works/:category', {
-                templateUrl: PARTIALS_PREFIX + 'works.html',
+                templateUrl: PARTIALS_PREFIX + 'lightbox.html',
                 controller: 'WorksController',
                 controllerAs: CONTROLLER_AS_VM
             })
