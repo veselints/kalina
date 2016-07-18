@@ -36,14 +36,14 @@ a {
     color: black;
 }
 
-// .clearfix:after {
-//     visibility: hidden;
-//     display: block;
-//     font-size: 0;
-//     content: " ";
-//     clear: both;
-//     height: 0;
-// }
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
 
 .header-name {
     padding: 4vh 1vw 3vh;
@@ -65,7 +65,7 @@ nav {
 }
 
 nav .k-widget.k-menu-horizontal {
-    width: 70%;
+    width: 60%;
     border-bottom: 2px solid transparent;
     display:inline-block;
     vertical-align: middle;
@@ -84,7 +84,7 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
 nav .search {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 16%;
+    margin-left: 26%;
     width: 13.5%;
 }
 
@@ -95,16 +95,20 @@ nav .search .k-textbox {
 
 .main {
     text-align: center;
-    height: 74.5vh;
 }
 
 .main .work-container {
     margin: 4vh auto;
     display: inline-block;
     text-align: left;
+    height: 66.5vh;
 }
 
-.main .work-container .inner-work-container .name {
+.main .name {
+    font-style: italic;
+}
+
+.main .work-container.home-work-container .name {
     margin: 2vh auto;
 }
 
@@ -124,46 +128,74 @@ nav .search .k-textbox {
 }
 
 .main .worksView .work-container {
-    padding: 50px 50px 20px 50px;
-    margin: 35px auto;
+    padding: 5vh 5vw 2vh 5vw;
+    margin: 3vh auto;
     border: 0.5px solid #DDD;
-    // background-color: rgb(245, 245, 245);
-    box-shadow: 0 0 10px 1px rgb(200, 200, 200);
-    width: 65vw;
+    box-shadow: 0 0 1vh 0.1vh rgb(200, 200, 200);
+    width: 68vw;
     vertical-align: middle;
     cursor: pointer;
+    height: 60vh;
 }
 
 .main .worksView>p {
     vertical-align: middle;
-    padding: 10px;
-    margin: 20px;
-    box-shadow: 0 0 5px 0.5px rgb(200, 200, 200);
+    padding: 1vh;
+    margin: 2vh;
+    box-shadow: 0 0 0.5vh 0.1vh rgb(200, 200, 200);
     display: inline-block;
-    width: 80px;
+    width: 6vw;
     cursor: pointer;
 }
 
 .main .worksView .work-container .work-image {
-    height:45vh;
+    height:49vh;
     width:100%;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.main .name {
-    font-style: italic;
+.main .worksView .work-container .inner-work-container .name {
+    margin: 1.5vh auto;
+}
+
+.main .worksView .work-container .inner-work-container .technique,
+.main .worksView .work-container .inner-work-container .year {
+    margin: 0.8vh auto;
 }
  
 .no-works-message {
-    font-size: 36px;
-    padding-top: 150px;
+    font-size: 4vh;
+    padding-top: 15vh;
     height: 52vh;
 }
 
+.main .works-list-view {
+    margin: 2vw;
+    text-align: center;
+    min-height: 68vh;
+}
+
+.main .works-list-view .inner-work-container {
+    padding: 2vw;
+    margin: 0.5vw;
+    background-color: rgb(200, 200, 200);
+    float: left;
+    cursor: pointer;
+}
+
+.main .works-list-view .work-image {
+    height:18.65vw;
+    width:18.65vw;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 footer {
-    width: 100%
+    width: 97vw;
+    margin: 0 1vw;
 }
 
 footer .footer-text {
