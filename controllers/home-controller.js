@@ -11,17 +11,17 @@
     vm.showWork = true;
 
     // I should check how to terminate this call when going to another controller
-    $interval(function() {
-      vm.showWork = false;
-      var newWork = worksService.getCurrentWork();
-      vm.currentImageUrl = newWork.url;
-      vm.currentImageName = newWork.name;
-      $timeout(function() {
-        $timeout(function() {
-          vm.showWork = true;
-        }, 300);
-      }, 1000);
-    }, 7000);
+    // $interval(function() {
+    //   vm.showWork = false;
+    //   var newWork = worksService.getCurrentWork();
+    //   vm.currentImageUrl = newWork.url;
+    //   vm.currentImageName = newWork.name;
+    //   $timeout(function() {
+    //     $timeout(function() {
+    //       vm.showWork = true;
+    //     }, 300);
+    //   }, 1000);
+    // }, 7000);
   }
 
   angular.module('kalinaApp.controllers')

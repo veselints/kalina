@@ -21,6 +21,7 @@ body {
   transition:1s linear all;
   opacity:1;
 }
+
 .fade.ng-leave.ng-leave-active {
   opacity:0;
 }
@@ -44,10 +45,10 @@ a {
 // }
 
 .header-name {
-    padding: 40px 10px 30px;
+    padding: 4vh 1vw 3vh;
     font-weight: 100;
     font-size: 36px;
-    margin: 0 30px;
+    margin: 0 2%;
     border-bottom: 0.5px solid #DDD;
 }
 
@@ -56,13 +57,21 @@ a {
 }
 
 nav {
-    margin: 0 30px;
+    margin: 0 2%;
     display: inline-block;
     position: relative;
+    width: 96%;
+}
+
+nav .k-widget.k-menu-horizontal {
+    width: 75%;
+    border-bottom: 2px solid transparent;
+    display:inline-block;
+    vertical-align: middle;
 }
 
 nav .k-widget.k-menu-horizontal>.k-item {
-    width: 150px;
+    width: 16%;
     border-bottom: 2px solid transparent;
 }
 
@@ -71,21 +80,47 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
     color: #E99;
 }
 
-.search {
-    position: absolute;
-    top: 125px;
-    right: 30px;
+nav .search {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11%;
+    width: 13.5%;
+}
+
+nav .search .k-textbox {
+    width: 100%;
+    font-style: italic;
 }
 
 .main {
     text-align: center;
+    height: 76vh;
 }
 
 .main .work-container {
-    margin: 40px auto;
+    margin: 4vh auto;
     display: inline-block;
     text-align: left;
     height: 60vh;
+}
+
+.main .work-container .inner-work-container .name {
+    margin: 3vh auto;
+}
+
+.main .work-container.home-work-container {
+    margin: 4vh auto;
+    width: 95vw;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.main .work-container.home-work-container .work-image {
+    height:63vh;
+    width:100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main .worksView .work-container {
@@ -133,8 +168,8 @@ footer {
 
 footer .footer-text {
     text-align: right;
-    padding: 20px 10px;
-    margin: 0 30px;
+    padding: 2vh 1vw;
+    margin: 0 1vw;
     border-top: 0.5px solid #DDD;
     color: #DDD;
 }
