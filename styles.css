@@ -154,6 +154,7 @@ footer .footer-text {
 
 
 /* styling home main content */
+
 .main .work-container.home-work-container {
     // margin: 30px auto;
     width: 95%;
@@ -211,6 +212,10 @@ footer .footer-text {
 
 .main .worksView .work-container .inner-work-container .name {
     margin: 11px 0;
+}
+
+.main .worksView .portrait-mobile-prev {
+    display: none;
 }
 
 
@@ -344,4 +349,61 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
     html .main .work-container.home-work-container .work-image {
         height: 40vw;
     }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: portrait) and (min-device-width: 600px) and (max-device-width: 1280px),
+only screen and (-o-min-device-pixel-ratio: 13/10) and (orientation: portrait) and (min-device-width: 600px) and (max-device-width: 1280px),
+only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-device-width: 600px) and (max-device-width: 1280px) {
+    html body {
+        font-size: 14px;
+    }
+    html footer {
+        position: fixed;
+        bottom: 0;
+    }
+    html nav .search {
+        display: none;
+    }
+    html .top-header .header-name {
+        vertical-align: middle;
+        width: 60%;
+        font-size: 2.5em;
+    }
+    html .top-header .search {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        width: 39.2%;
+    }
+
+
+    html nav .k-widget.k-menu-horizontal {
+        width: 100%;
+    }
+
+
+    html .main .worksView {
+        margin-bottom: 30px;
+    }
+    html .main .worksView .work-container {
+        width: 88%;
+        padding: 0 30px;
+        margin-bottom: 0;
+    }
+    html .main .worksView>p {
+        padding: 16px;
+        width: 8%;
+    }
+    html .main .worksView .portrait-mobile-prev {
+        display: inline-block;
+    }
+    html .main .worksView .landscape-prev {
+        display: none;
+    }
+
+
+    html .main .work-container.home-work-container {
+        width: 88%;
+    }
+    
 }

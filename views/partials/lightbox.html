@@ -1,5 +1,5 @@
 <div class="worksView">
-    <p ng-click="vm.openPrev()">previous</p>
+    <p ng-click="vm.openPrev()" class="landscape-prev">previous</p>
     <div class="work-container" ng-click="vm.openNext()">
         <div class="inner-work-container fade" ng-if="vm.showWork">
             <div class="work-image" style="background-image: url({{vm.currentWork.url}});"></div>
@@ -10,5 +10,6 @@
             </div>
         </div>
     </div>
-    <p ng-click="vm.openNext()">next</p>
+    <p ng-click="vm.openPrev()" class="portrait-mobile-prev">previous</p>
+    <p ng-click="vm.openNext()" class="next">next</p>
 </div>
