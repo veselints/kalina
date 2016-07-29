@@ -392,7 +392,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     }
     html .main .worksView>p {
         padding: 16px;
-        width: 8%;
+        width: 12%;
     }
     html .main .worksView .portrait-mobile-prev {
         display: inline-block;
@@ -400,10 +400,55 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html .main .worksView .landscape-prev {
         display: none;
     }
-
-
     html .main .work-container.home-work-container {
         width: 88%;
     }
-    
 }
+
+@media only screen and (orientation: portrait) and (max-device-width: 599px) {
+    html body {
+        font-size: 14px;
+    }
+    html footer {
+        position: static;
+    }
+    html nav .search {
+        display: none;
+    }
+    html .top-header .header-name {
+        vertical-align: middle;
+        width: 100%;
+        font-size: 3em;
+    }
+    html .top-header .search {
+        display: none;
+    }
+
+
+    html nav .k-widget.k-menu-horizontal {
+        width: 100%;
+    }
+
+
+    html .main .worksView {
+        margin-bottom: 30px;
+    }
+    html .main .worksView .work-container {
+        width: 84%;
+        padding: 0 30px;
+    }
+    html .main .worksView>p {
+        padding: 16px;
+        width: 16%;
+    }
+    html .main .worksView .portrait-mobile-prev {
+        display: inline-block;
+    }
+    html .main .worksView .landscape-prev {
+        display: none;
+    }
+    html .main .work-container.home-work-container {
+        width: 88%;
+    }
+}
+
