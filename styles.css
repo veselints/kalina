@@ -300,11 +300,11 @@ footer .footer-text {
     margin-bottom: 15px;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-only screen and (-o-min-device-pixel-ratio: 13/10),
-only screen and (min-resolution: 120dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px),
+only screen and (-o-min-device-pixel-ratio: 13/10) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px),
+only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px) {
     html body {
-        font-size: 16px;
+        font-size: 14px;
     }
     html footer {
         position: static;
@@ -327,20 +327,21 @@ only screen and (min-resolution: 120dpi) {
         width: 100%;
     }
     html .main .worksView .work-container {
-        height: 450px;
-        width: 50%;
+        height: 42vw;
+        width: 60%;
+        padding: 0 30px 20px;
     }
     html .main .worksView .work-container .work-image {
-        height: 350px;
+        height: 38vw;
     }
     html .main .worksView>p {
         padding: 16px;
         width: 8%;
     }
     html .main .work-container.home-work-container {
-        height: 500px;
+        height: 43vw;
     }
     html .main .work-container.home-work-container .work-image {
-        height: 450px;
+        height: 40vw;
     }
 }
