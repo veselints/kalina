@@ -16,18 +16,23 @@
 <body ng-app="kalinaApp" ng-cloak>
     <!-- Header -->
     <header>
-        <h1 class="header-name">
-            <a href="#/home">
-                Kalina Kraleva
-                <span>
-                    //
-                </span>
-            </a>
-        </h1>
+        <div class="top-header">
+            <h1 class="header-name">
+                <a href="#/home">
+                    Kalina Kraleva
+                    <span>
+                        //
+                    </span>
+                </a>
+            </h1>
+            <div class="search">
+                <input type="text" class="k-textbox searchbox" placeholder="Find work..." />
+            </div>
+        </div>
         <nav>
             <ul id="menu"></ul>
             <div class="search">
-                <input type="text" class="k-textbox" id="search" placeholder="Find work..." />
+                <input type="text" class="k-textbox searchbox" placeholder="Find work..." />
             </div>
         </nav>
     </header>
@@ -85,7 +90,7 @@
             }
         });
 
-        $('#search').on('input', function(e) {
+        $('.searchbox').on('input', function(e) {
             var text = e.target.value;
             window.location.replace('#/search/' + text);
         });
