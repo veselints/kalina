@@ -309,6 +309,9 @@ only screen and (min-resolution: 120dpi) {
     html body {
         font-size: 12px;
     }
+    html footer {
+        position: static;
+    }
     html nav .search {
         display: none;
     }
@@ -335,7 +338,7 @@ only screen and (min-resolution: 120dpi) {
     }
     html .main .worksView>p {
         padding: 16px;
-        width: 12%;
+        width: 8%;
     }
     html .main .work-container.home-work-container {
         height: 500px;
