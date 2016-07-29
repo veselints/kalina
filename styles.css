@@ -307,7 +307,7 @@ footer .footer-text {
 only screen and (-o-min-device-pixel-ratio: 13/10),
 only screen and (min-resolution: 120dpi) {
     html body {
-        font-size: 0.9em;
+        font-size: 12px;
     }
     html nav .search {
         display: none;
