@@ -62,7 +62,7 @@ a {
 .top-header .header-name {
     display: inline-block;
     margin: 0;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .top-header .header-name span {
@@ -82,19 +82,17 @@ nav {
 
 nav .k-widget.k-menu-horizontal {
     width: 71%;
-    border-bottom: 2px solid transparent;
     display: inline-block;
     vertical-align: middle;
 }
 
 nav .k-widget.k-menu-horizontal>.k-item {
     width: 16%;
-    border-bottom: 2px solid transparent;
 }
 
-nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem {
-    border-bottom-color: #E99;
-    color: #E99;
+nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
+    color: #F66;
+    font-weight: 600;
 }
 
 
@@ -111,6 +109,7 @@ nav .search .k-textbox,
 .top-header .search .k-textbox {
     width: 100%;
     font-style: italic;
+    font-size: 0.8em;
 }
 
 .top-header .search {
@@ -144,7 +143,7 @@ footer .footer-text {
 }
 
 .main .work-container {
-    margin: 30px auto;
+    margin: 15px auto 30px;
     display: inline-block;
     text-align: left;
 }
@@ -155,34 +154,33 @@ footer .footer-text {
 
 
 /* styling home main content */
-
-.main .work-container.home-work-container .name {
-    margin: 15px auto;
-}
-
 .main .work-container.home-work-container {
-    margin: 30px auto;
+    // margin: 30px auto;
     width: 95%;
     vertical-align: middle;
     text-align: center;
 }
 
 .main .work-container.home-work-container .work-image {
-    height: 62vh;
+    height: 59vh;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.main .work-container.home-work-container .name {
+    margin: 15px auto;
+}
+
 
 /* styling lightbox main content */
 
 .main .worksView .work-container {
-    padding: 30px 60px 20px;
+    padding: 0 60px 20px;
     margin: 23px auto;
-    border: 0.5px solid #DDD;
-    box-shadow: 0 0 10px 1px rgb(200, 200, 200);
+    // border: 0.5px solid #DDD;
+    // box-shadow: 0 0 10px 1px rgb(200, 200, 200);
     width: 68%;
     vertical-align: middle;
     cursor: pointer;
@@ -200,20 +198,19 @@ footer .footer-text {
 }
 
 .main .worksView .work-container .work-image {
-    height: 49vh;
+    height: 53vh;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.main .worksView .work-container .inner-work-container .name {
-    margin: 11px auto;
+.main .worksView .work-container .inner-work-container .details {
+    text-align: left;
 }
 
-.main .worksView .work-container .inner-work-container .technique,
-.main .worksView .work-container .inner-work-container .year {
-    margin: 6px auto;
+.main .worksView .work-container .inner-work-container .name {
+    margin: 11px 0;
 }
 
 
@@ -307,7 +304,7 @@ footer .footer-text {
 only screen and (-o-min-device-pixel-ratio: 13/10),
 only screen and (min-resolution: 120dpi) {
     html body {
-        font-size: 12px;
+        font-size: 16px;
     }
     html footer {
         position: static;
@@ -318,7 +315,7 @@ only screen and (min-resolution: 120dpi) {
     html .top-header .header-name {
         vertical-align: middle;
         width: 60%;
-        font-size: 2em;
+        font-size: 2.5em;
     }
     html .top-header .search {
         display: inline-block;
