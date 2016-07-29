@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function HomeController(worksService, $location, $interval, $timeout) {
+  function HomeController(worksService, $scope, $location, $interval, $timeout) {
     var vm = this;
 
     vm.showWork = false;
@@ -11,7 +11,7 @@
     vm.showWork = true;
 
     // I should check how to terminate this call when going to another controller
-    $interval(function() {
+    var intervalPromise = $interval(function() {
       vm.showWork = false;
       var newWork = worksService.getCurrentWork();
       vm.currentImageUrl = newWork.url;
@@ -22,8 +22,12 @@
         }, 300);
       }, 1000);
     }, 7000);
+
+    $scope.$on('$destroy', function() {
+      $interval.cancel(intervalPromise);
+    });
   }
 
   angular.module('kalinaApp.controllers')
-    .controller('HomeController', ['worksService', '$location', '$interval', '$timeout', HomeController]);
+    .controller('HomeController', ['worksService', '$scope', '$location', '$interval', '$timeout', HomeController]);
 }());

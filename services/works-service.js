@@ -32,10 +32,7 @@
       technique: 'Water clolor',
       year: '2016',
       category: 'watercolour'
-    }, 
-
-
-    {
+    }, {
       name: 'Poetry is free',
       url: 'http://webneel.com/daily/sites/default/files/images/daily/04-2014/1-bird-drawing.jpg',
       technique: 'Drawing',
@@ -71,22 +68,9 @@
       technique: 'Drawing',
       year: '2016',
       category: 'drawings'
-    }, 
-
-
-
-
-
-
-    {
-      name: 'The free fly',
-      url: 'http://gubarew.ru/images/gallery/pencil-0049.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
     }, {
       name: 'The free fly',
-      url: 'http://www.beal-surrealiste.com/Misanthrope(PENCIL)FullView.JPG',
+      url: 'http://gubarew.ru/images/gallery/pencil-0049.jpg',
       technique: 'Free graphics',
       year: '2012',
       category: 'graphics'
