@@ -387,8 +387,12 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     }
     html .main .worksView .work-container {
         width: 88%;
+        height: 95vw;
         padding: 0 30px;
         margin-bottom: 0;
+    }
+    html .main .worksView .work-container .work-image {
+        height: 80vw;
     }
     html .main .worksView>p {
         padding: 16px;
@@ -418,7 +422,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html .top-header .header-name {
         vertical-align: middle;
         width: 100%;
-        font-size: 3em;
+        font-size: 2.5em;
     }
     html .top-header .search {
         display: none;
@@ -434,8 +438,12 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         margin-bottom: 30px;
     }
     html .main .worksView .work-container {
-        width: 84%;
+        width: 80%;
+        height: 95vw;
         padding: 0 30px;
+    }
+    html .main .worksView .work-container .work-image {
+        height: 80vw;
     }
     html .main .worksView>p {
         padding: 16px;
@@ -452,3 +460,53 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     }
 }
 
+@media only screen and (orientation: landscape) and (max-device-width: 599px) {
+    html body {
+        font-size: 14px;
+    }
+    html footer {
+        position: static;
+    }
+    html nav .search {
+        display: none;
+    }
+    html .top-header .header-name {
+        vertical-align: middle;
+        width: 100%;
+        font-size: 2.5em;
+    }
+    html .top-header .search {
+        display: none;
+    }
+
+
+    html nav .k-widget.k-menu-horizontal {
+        width: 100%;
+    }
+
+
+    html .main .worksView {
+        margin-bottom: 30px;
+    }
+    html .main .worksView .work-container {
+        width: 80%;
+        height: 95vw;
+        padding: 0 30px;
+    }
+    html .main .worksView .work-container .work-image {
+        height: 80vw;
+    }
+    html .main .worksView>p {
+        padding: 16px;
+        width: 16%;
+    }
+    html .main .worksView .portrait-mobile-prev {
+        display: inline-block;
+    }
+    html .main .worksView .landscape-prev {
+        display: none;
+    }
+    html .main .work-container.home-work-container {
+        width: 88%;
+    }
+}
