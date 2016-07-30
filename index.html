@@ -23,6 +23,9 @@
                     <span>
                         //
                     </span>
+                    <a class="sandwich">
+                        <div></div>
+                    </a>
                 </a>
             </h1>
             <div class="search">
@@ -87,12 +90,28 @@
             select: function(e) {
                 $('.activeMenuItem').removeClass('activeMenuItem');
                 $(e.item).addClass('activeMenuItem');
+                $('#menu').removeClass('openedMenu');
+                $('#menu').addClass('closedMenu');
+                $('.sandwich').removeClass('open');
             }
         });
 
         $('.searchbox').on('input', function(e) {
             var text = e.target.value;
             window.location.replace('#/search/' + text);
+        });
+
+        $('.sandwich').on('click', function(e) {
+            var menu = $('#menu');
+            if (menu.hasClass('openedMenu')) {
+                menu.removeClass('openedMenu');
+                menu.addClass('closedMenu');
+                $('.sandwich').removeClass('open');
+            } else {
+                menu.removeClass('closedMenu');
+                menu.addClass('openedMenu');
+                $('.sandwich').addClass('open');
+            }
         });
     });
     </script>
