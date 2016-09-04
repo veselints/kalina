@@ -81,7 +81,7 @@ nav {
 }
 
 nav .k-widget.k-menu-horizontal {
-    width: 71%;
+    width: 73%;
     display: inline-block;
     vertical-align: middle;
 }
@@ -93,6 +93,7 @@ nav .k-widget.k-menu-horizontal>.k-item {
 nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
     color: #F66;
     font-weight: 600;
+    // padding: 1em 0.8em;
 }
 
 
@@ -101,7 +102,7 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
 nav .search {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 15%;
+    margin-left: 13%;
     width: 13.5%;
 }
 
@@ -179,8 +180,8 @@ footer .footer-text {
 /* styling lightbox main content */
 
 .main .worksView .work-container {
-    padding: 30px 60px 20px;
-    margin: 23px auto;
+    padding: 25px 40px;
+    margin: 15px auto;
     border: 0.5px solid #DDD;
     box-shadow: 0 0 10px 1px rgb(200, 200, 200);
     width: 68%;
@@ -189,23 +190,33 @@ footer .footer-text {
     height: 59vh;
 }
 
-@media only screen  and (min-height: 801px) {
+@media (min-width: 1440px) {
     html .main .worksView .work-container {
-        height: 65vh;
+        padding: 30px 60px 20px;
+        margin-top: 23px;
+        height: 64vh;
     }
 
     html .main .worksView .work-container .work-image {
-        height: 58vh;
+        height: 56vh;
+    }
+
+    html .main .work-container.home-work-container .work-image {
+        height: 64vh;
     }
 }
 
-@media only screen  and (min-height: 901px) {
+@media (min-width: 1601px) {
     html .main .worksView .work-container {
-        height: 69vh;
+        height: 71vh;
     }
 
     html .main .worksView .work-container .work-image {
-        height: 62vh;
+        height: 64vh;
+    }
+
+    html .main .work-container.home-work-container .work-image {
+        height: 71vh;
     }
 }
 
@@ -220,7 +231,7 @@ footer .footer-text {
 }
 
 .main .worksView .work-container .work-image {
-    height: 53vh;
+    height: 51vh;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
