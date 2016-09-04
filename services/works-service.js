@@ -3,142 +3,265 @@
 
   function worksService(data) {
     var works = [{
-      name: 'Mondrian',
-      url: 'http://www.delphineaparis.com/sites/www.delphineaparis.com/files/mondrian_1.jpg',
-      technique: 'Water clolor',
-      year: '2015',
-      category: 'watercolour'
-    }, {
-      name: 'The free fly',
-      url: 'http://www.metmuseum.org/toah/images/h5/h5_1987.455.1.jpg',
-      technique: 'Ex Libris',
-      year: '2012',
-      category: 'exlibris'
-    }, {
-      name: 'Over the borders',
-      url: 'https://dl.airtable.com/tbKNvwPURJGlGLtc8vG7_08-00571.jpg',
-      technique: 'Ex Libris',
+      name: 'Feelings and Thoughts',
+      url: 'works/drawings/FeelingsAndThoughts.jpg',
+      technique: 'Colour pencil drawing',
       year: '2014',
+      category: 'drawings',
+      size: '70x100cm'
+    }, {
+      name: 'Melancholy',
+      url: 'works/drawings/Melancholy.jpg',
+      technique: 'Colour pencil drawing',
+      year: '2014',
+      category: 'drawings',
+      size: '70x100cm'
+    }, {
+      name: 'Past Racalls',
+      url: 'works/drawings/PastRacalls.jpg',
+      technique: 'Colour pencil drawing',
+      year: '2014',
+      category: 'drawings',
+      size: '100x70cm'
+    }, {
+      name: 'Aldo Manuzio',
+      url: 'works/exlibris/AldoManuzio.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2015',
+      category: 'exlibris',
+      size: '11x11cm'
+    }, {
+      name: 'Bella Italia',
+      url: 'works/exlibris/BellaItalia.jpg',
+      technique: 'Ex libris',
+      year: '2016',
       category: 'exlibris'
     }, {
-      name: 'Within our thoughts',
-      url: 'http://www.metmuseum.org/toah/images/h5/h5_1984.315.42.jpg',
-      technique: 'Water clolor',
-      year: '2012',
-      category: 'watercolour'
+      name: 'Feelings',
+      url: 'works/exlibris/Feelings.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2014',
+      category: 'exlibris',
+      size: '10x12cm'
     }, {
-      name: 'Poetry is free',
-      url: 'http://i.telegraph.co.uk/multimedia/archive/02701/klee_2701723b.jpg',
-      technique: 'Water clolor',
+      name: 'Female Feelings',
+      url: 'works/exlibris/FemaleFeelings.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2014',
+      category: 'exlibris',
+      size: '11x14cm'
+    }, {
+      name: 'Just Like Shiva',
+      url: 'works/exlibris/JustLikeShiva.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2014',
+      category: 'exlibris',
+      size: '10x16cm'
+    }, {
+      name: 'Mixing Music with Architecture',
+      url: 'works/exlibris/MixingMusicWithArchitecture.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2014',
+      category: 'exlibris',
+      size: '10x13cm'
+    }, {
+      name: 'Music and Poetry I',
+      url: 'works/exlibris/MusicAndPoetryI.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2013',
+      category: 'exlibris',
+      size: '10x14cm'
+    }, {
+      name: 'Music and Poetry II',
+      url: 'works/exlibris/MusicAndPoetryII.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2013',
+      category: 'exlibris',
+      size: '9x12cm'
+    }, {
+      name: 'Romeo and Juliet',
+      url: 'works/exlibris/RomeoAndJuliet.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2015',
+      category: 'exlibris',
+      size: '14x14cm'
+    }, {
+      name: "Shepherdess Leading to Noah's Ark",
+      url: 'works/exlibris/ShepherdessLeadingToNoahsArk.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2013',
+      category: 'exlibris',
+      size: '16x21cm'
+    }, {
+      name: 'Time',
+      url: 'works/exlibris/Time.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2013',
+      category: 'exlibris',
+      size: '10x12cm'
+    }, {
+      name: 'Winter',
+      url: 'works/exlibris/Winter.jpg',
+      technique: 'Ex libris',
       year: '2016',
-      category: 'watercolour'
+      category: 'exlibris'
     }, {
-      name: 'Poetry is free',
-      url: 'http://webneel.com/daily/sites/default/files/images/daily/04-2014/1-bird-drawing.jpg',
-      technique: 'Drawing',
+      name: 'Autumn',
+      url: 'works/freeetchings/Autumn.jpg',
+      technique: 'Free etching',
       year: '2016',
-      category: 'drawings'
+      category: 'freeetchings'
     }, {
-      name: 'Poetry is free',
-      url: 'https://www.strathmoreartist.com/tl_files/content/product_landing_pages/drawing/drawing_artwork_600px.jpg',
-      technique: 'Drawing',
+      name: 'Babylon I',
+      url: 'works/freeetchings/BabylonI.jpg',
+      technique: 'Free etching C3C5',
+      year: '2011',
+      category: 'freeetchings',
+      size: '20x29cm'
+    }, {
+      name: 'Dandelion',
+      url: 'works/freeetchings/Dandelion.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '19x29cm'
+    }, {
+      name: 'Enigma',
+      url: 'works/freeetchings/Enigma.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '17x38cm'
+    }, {
+      name: 'Labyrinth',
+      url: 'works/freeetchings/Labyrinth.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '20x29cm'
+    }, {
+      name: 'Landscape',
+      url: 'works/freeetchings/Landscape.jpg',
+      technique: 'Free etching X6',
+      year: '2008',
+      category: 'freeetchings',
+      size: '34x40cm'
+    }, {
+      name: 'Sacred Image I',
+      url: 'works/freeetchings/SacredImageI.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '39x59cm'
+    }, {
+      name: 'Sacred Image II',
+      url: 'works/freeetchings/SacredImageII.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '59x39cm'
+    }, {
+      name: 'Sea',
+      url: 'works/freeetchings/Sea.jpg',
+      technique: 'Free etching C3C5',
+      year: '2011',
+      category: 'freeetchings',
+      size: '30x40cm'
+    }, {
+      name: 'Seasons',
+      url: 'works/freeetchings/Seasons.jpg',
+      technique: 'Free etching',
       year: '2016',
-      category: 'drawings'
+      category: 'freeetchings'
     }, {
-      name: 'Poetry is free',
-      url: 'https://www.artbynolan.com/wp-content/uploads/34-pencil-phone-final-drawing-600.jpg',
-      technique: 'Drawing',
-      year: '2016',
-      category: 'drawings'
+      name: 'Thracian Ritual',
+      url: 'works/freeetchings/ThracianRitual.jpg',
+      technique: 'Free etching X3',
+      year: '2010',
+      category: 'freeetchings',
+      size: '44x59cm'
     }, {
-      name: 'Poetry is free',
-      url: 'http://s11.favim.com/orig/160407/love-beautiful-drawing-drawing-draw-Favim.com-4180071.jpeg',
-      technique: 'Drawing',
-      year: '2016',
-      category: 'drawings'
-    }, {
-      name: 'Poetry is free',
-      url: 'https://cms-assets.tutsplus.com/uploads/users/108/posts/25107/image/draw-vault-boy-fallout-final.png',
-      technique: 'Drawing',
-      year: '2016',
-      category: 'drawings'
-    }, {
-      name: 'Poetry is free',
-      url: 'http://www.fotolip.com/wp-content/uploads/2016/05/Drawing-Pictures-6.jpg',
-      technique: 'Drawing',
-      year: '2016',
-      category: 'drawings'
-    }, {
-      name: 'The free fly',
-      url: 'http://gubarew.ru/images/gallery/pencil-0049.jpg',
-      technique: 'Free graphics',
+      name: 'Womb',
+      url: 'works/freeetchings/Womb.jpg',
+      technique: 'Free etching C4',
       year: '2012',
-      category: 'graphics'
+      category: 'freeetchings',
+      size: '44x51cm'
     }, {
-      name: 'The free fly',
-      url: 'http://s3.gomedia.us/wp-content/uploads/2006/12/pencil-close-up.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Forest II',
+      url: 'works/smalletchings/ForestII.jpg',
+      technique: 'Small etching C3C5',
+      year: '2010',
+      category: 'smalletchings',
+      size: '10x10cm'
     }, {
-      name: 'The free fly',
-      url: 'http://imgs.abduzeedo.com/files/articles/black-white-pencil-illustrations-mall-licudine/my_bitter_tears_by_frecklefaced29-d5kqo4s.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Love Is on the Top of a Needle',
+      url: 'works/smalletchings/LoveIsOnTheTopOfANeedle.jpg',
+      technique: 'Small etching C3C5C6',
+      year: '2015',
+      category: 'smalletchings',
+      size: '13x16cm'
     }, {
-      name: 'The free fly',
-      url: 'http://25.media.tumblr.com/4d046bf11630eca12d62d17a14f4fcb4/tumblr_mygsngVNCY1rd0xeeo1_500.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Medea I',
+      url: 'works/smalletchings/MedeaI.jpg',
+      technique: 'Small etching C3C5',
+      year: '2013',
+      category: 'smalletchings',
+      size: '16x21cm'
     }, {
-      name: 'The free fly',
-      url: 'http://gubarew.ru/images/gallery/pencil-0010.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Medea II',
+      url: 'works/smalletchings/MedeaII.jpg',
+      technique: 'Small etching C3C5',
+      year: '2013',
+      category: 'smalletchings',
+      size: '16x21cm'
     }, {
-      name: 'The free fly',
-      url: 'http://alyoshingura.narod.ru/images/ded_2.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Medea III',
+      url: 'works/smalletchings/MedeaIII.jpg',
+      technique: 'Small etching C3C5',
+      year: '2015',
+      category: 'smalletchings',
+      size: '16x22cm'
     }, {
-      name: 'The free fly',
-      url: 'http://2.bp.blogspot.com/-JzYMCcpSiQA/TlOuHnv7JfI/AAAAAAAAARM/cF_cObzPQWE/s1600/Naruto+and+Sakura+kissing.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'The Rose of War',
+      url: 'works/smalletchings/TheRoseOfWar.jpg',
+      technique: 'Small etching C3C5',
+      year: '2015',
+      category: 'smalletchings',
+      size: '15x15cm'
     }, {
-      name: 'The free fly',
-      url: 'http://img05.deviantart.net/7107/i/2012/252/d/9/deidara_pencil_drawing_by_ekusasxisxgod-d5e6c1q.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'War',
+      url: 'works/smalletchings/War.jpg',
+      technique: 'Small etching C3C5',
+      year: '2015',
+      category: 'smalletchings',
+      size: '15x15cm'
     }, {
-      name: 'The free fly',
-      url: 'http://gubarew.ru/images/gallery/pencil-0011.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Flower of Art',
+      url: 'works/watercolor/FlowerOfArt.jpg',
+      technique: 'Watercolour children illustration',
+      year: '2015',
+      category: 'watercolor',
+      size: '40x50cm'
     }, {
-      name: 'The free fly',
-      url: 'http://gubarew.ru/images/gallery/pencil-0170.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'In Vino Veritas',
+      url: 'works/watercolor/InVinoVeritas.jpg',
+      technique: 'Watercolour',
+      year: '2013',
+      category: 'watercolor',
+      size: '35x44cm'
     }, {
-      name: 'The free fly',
-      url: 'https://pixabay.com/static/uploads/photo/2015/05/15/22/45/octopus-769372_960_720.jpg',
-      technique: 'Free graphics',
-      year: '2012',
-      category: 'graphics'
+      name: 'Sunflowers',
+      url: 'works/watercolor/Sunflowers.jpg',
+      technique: 'Watercolour',
+      year: '2013',
+      category: 'watercolor',
+      size: '100x70cm'
     }];
 
 
     function getCurrentWork() {
-      var random = Math.floor(Math.random() * (20));
+      var random = Math.floor(Math.random() * (35));
       console.log(random);
       return works[random];
     }
