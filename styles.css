@@ -627,13 +627,12 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         margin-bottom: 30px;
     }
     html .main .worksView .work-container {
-        width: 80%;
-        height: 95vw;
-        padding: 0 30px;
+        width: 90%;
+        // height: 95vw;
     }
-    html .main .worksView .work-container .work-image {
-        height: 80vw;
-    }
+    // html .main .worksView .work-container .work-image {
+    //     height: 80vh;
+    // }
     html .main .worksView>p {
         padding: 16px;
         width: 16%;
