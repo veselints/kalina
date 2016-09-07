@@ -180,25 +180,40 @@ footer .footer-text {
 /* styling lightbox main content */
 
 .main .worksView .work-container {
-    padding: 25px 40px;
     margin: 15px auto;
-    border: 0.5px solid #DDD;
-    box-shadow: 0 0 10px 1px rgb(200, 200, 200);
     width: 68%;
     vertical-align: middle;
     cursor: pointer;
-    height: 59vh;
+    height: 66vh;
+}
+
+.main .worksView .work-container .work-image {
+    height: 58vh;
+    width: 100%;
+    display: inline-block;
+}
+
+.main .worksView .work-container .work-image img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.main .worksView .work-container .inner-work-container .details {
+    text-align: left;
 }
 
 @media (min-width: 1440px) {
     html .main .worksView .work-container {
         padding: 30px 60px 20px;
-        margin-top: 23px;
-        height: 64vh;
+        height: 66vh;
+        border: 0.5px solid #DDD;
+        box-shadow: 0 0 10px 1px rgb(200, 200, 200);
     }
 
     html .main .worksView .work-container .work-image {
-        height: 56vh;
+        height: 58vh;
     }
 
     html .main .work-container.home-work-container .work-image {
@@ -228,14 +243,6 @@ footer .footer-text {
     display: inline-block;
     width: 80px;
     cursor: pointer;
-}
-
-.main .worksView .work-container .work-image {
-    height: 51vh;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .main .worksView .work-container .inner-work-container .details {

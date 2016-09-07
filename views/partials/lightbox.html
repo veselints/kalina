@@ -1,8 +1,10 @@
 <div class="worksView">
     <p ng-click="vm.openPrev()" class="landscape-prev">previous</p>
-    <div class="work-container" ng-click="vm.openNext()">
+    <div class="work-container observable" ng-click="vm.openNext()">
         <div class="inner-work-container fade" ng-if="vm.showWork">
-            <div class="work-image" style="background-image: url({{vm.currentWork.url}});"></div>
+            <div class="work-image">
+                <img class="image-image" src="{{vm.currentWork.url}}" alt="{{vm.currentWork.name}}">
+            </div>
             <div class="details">
                 <h3 class="name">{{vm.currentWork.name}}</h3>
                 <span class="technique">{{vm.currentWork.technique}},</span>
@@ -13,4 +15,30 @@
     </div>
     <p ng-click="vm.openPrev()" class="portrait-mobile-prev">previous</p>
     <p ng-click="vm.openNext()" class="next">next</p>
+    <script type="text/javascript">
+        var target = $('.observable')[0];
+        
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length > 0) {
+                    setTimeout(function() {
+                        var image = $('.image-image');
+                        var imageMargin = image.css('margin-left');
+                        var details = image.parent().siblings('.details');
+                        details.animate({
+                            marginLeft: imageMargin
+                        }, 1000);
+                    }, 300);
+                }
+            });
+        });
+
+        // configuration of the observer:
+        var config = {
+            childList: true
+        };
+
+        // pass in the target node, as well as the observer options
+        observer.observe(target, config);
+    </script>
 </div>

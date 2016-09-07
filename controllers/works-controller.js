@@ -8,7 +8,10 @@
 
     vm.works = worksService.getWorksByCategory(currentCategory);
     vm.currentWork = vm.works[index];
-    vm.showWork = true;
+    vm.showWork = false;
+    $timeout(function() {
+      vm.showWork = true;
+    }, 500);
 
     vm.openNext = function() {
       vm.showWork = false;
