@@ -20,22 +20,25 @@
         
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
-                if (mutation.addedNodes.length > 0) {
-                    setTimeout(function() {
-                        var image = $('.image-image');
-                        var imageMargin = image.css('margin-left');
+                var image = $('.image-image');
+
+                if (image.length > 0) {
+                    image[0].onload = function() {
+                        var img = $('.image-image');
+                        var imageMargin = img.css('margin-left');
                         var details = image.parent().siblings('.details');
                         details.animate({
                             marginLeft: imageMargin
                         }, 1000);
-                    }, 1000);
+                    };
                 }
             });
         });
 
         // configuration of the observer:
         var config = {
-            childList: true
+            childList: true,
+            subtree: true
         };
 
         // pass in the target node, as well as the observer options
