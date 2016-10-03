@@ -1,6 +1,8 @@
 <div class="work-container home-work-container">
     <div class="inner-work-container fade" ng-if="vm.showWork">
-    	<div class="work-image" style="background-image: url({{vm.currentImageUrl}});"></div>
+    	<div class="work-image">
+            <img class="image-image" src="{{vm.currentImageUrl}}">
+        </div>
         <h3 class="name">{{vm.currentImageName}}</h3>
     </div>
 </div>

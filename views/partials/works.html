@@ -1,9 +1,11 @@
 <div class="works-list-view clearfix">
 	<p class="no-works-message" ng-hide={{(vm.hasWorks)}}>No works fownd.</p>
     <div ng-repeat="work in vm.works">
-        <div class="inner-work-container">
-        	<div class="work-image" style="background-image: url({{work.url}});"></div>
-            <h3 class="name">{{work.name}}</h3>
+        <div class="inner-work-container" ng-click="vm.loadWork(work.id)">
+            <div class="work-image">
+                <img class="image-image" src="{{work.url}}">
+            </div>
+            <h4 class="name">{{work.name}}</h4>
             <p class="technique">{{work.technique}}</p>
             <p class="year">{{work.year}}</p>
             <p class="size">{{work.size}}</p>

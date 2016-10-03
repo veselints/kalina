@@ -9,7 +9,7 @@
     vm.currentImageUrl = changedWork.url;
     vm.currentImageName = changedWork.name;
     vm.showWork = true;
-
+    
     // I should check how to terminate this call when going to another controller
     var intervalPromise = $interval(function() {
       vm.showWork = false;

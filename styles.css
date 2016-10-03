@@ -12,6 +12,7 @@ body {
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
+    background-color: #EEE;
 }
 
 a {
@@ -52,11 +53,16 @@ a {
 
 /* styling header */
 
-.top-header {
-    padding: 30px 14px 23px;
-    font-weight: 100;
+header {
     margin: 0 2%;
     border-bottom: 0.5px solid #DDD;
+}
+
+.top-header {
+    padding: 30px 0 0;
+    font-weight: 100;
+    width: 20%;
+    display: inline-block;
 }
 
 .top-header .header-name {
@@ -73,21 +79,25 @@ a {
 /* styling navigation */
 
 nav {
-    margin: 0 2%;
+    margin: 0;
     display: inline-block;
     position: relative;
-    width: 96%;
-    font-size: 1em
+    font-size: 1em;
+    width: 79.5%;
 }
 
 nav .k-widget.k-menu-horizontal {
-    width: 73%;
     display: inline-block;
     vertical-align: middle;
+    background-color: transparent;
 }
 
 nav .k-widget.k-menu-horizontal>.k-item {
-    width: 14.2%;
+    width: 130px;
+}
+
+nav .k-widget.k-menu-horizontal>.k-item.k-state-hover {
+    background-color: #F8F8F8;
 }
 
 nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
@@ -102,7 +112,9 @@ nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
 nav .search {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 13%;
+    float: right;
+    margin-top: 8px;
+    //margin-left: 13%;
     width: 13.5%;
 }
 
@@ -111,6 +123,16 @@ nav .search .k-textbox,
     width: 100%;
     font-style: italic;
     font-size: 0.8em;
+    background-color: transparent;
+}
+
+nav .search .k-textbox:active,
+.top-header .search .k-textbox:active,
+nav .search .k-textbox:hover,
+.top-header .search .k-textbox:hover,
+nav .search .k-textbox:focus,
+.top-header .search .k-textbox:focus {
+    background-color: #F8F8F8;
 }
 
 .top-header .search {
@@ -157,7 +179,6 @@ footer .footer-text {
 /* styling home main content */
 
 .main .work-container.home-work-container {
-    // margin: 30px auto;
     width: 95%;
     vertical-align: middle;
     text-align: center;
@@ -165,15 +186,21 @@ footer .footer-text {
 }
 
 .main .work-container.home-work-container .work-image {
-    height: 59vh;
+    height: 60vh;
     width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: inline-block;
+}
+
+.main .work-container.home-work-container .work-image img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    border: 3.5vh solid #FFF;
 }
 
 .main .work-container.home-work-container .name {
-    margin: 15px auto;
+    margin: 9vh auto 0;
 }
 
 
@@ -184,11 +211,11 @@ footer .footer-text {
     width: 68%;
     vertical-align: middle;
     cursor: pointer;
-    height: 66vh;
+    height: 75vh;
 }
 
 .main .worksView .work-container .work-image {
-    height: 58vh;
+    height: 60vh;
     width: 100%;
     display: inline-block;
 }
@@ -198,40 +225,51 @@ footer .footer-text {
   max-width: 100%;
   margin: auto;
   display: block;
+  border: 3.5vh solid #FFF;
 }
 
 .main .worksView .work-container .inner-work-container .details {
     text-align: left;
+    margin-top: 7vh;
 }
 
 @media (min-width: 1440px) {
     html .main .worksView .work-container {
         padding: 30px 60px 20px;
-        height: 66vh;
+        height: 72vh;
         border: 0.5px solid #DDD;
         box-shadow: 0 0 10px 1px rgb(200, 200, 200);
+        background-color: white;
     }
 
     html .main .worksView .work-container .work-image {
-        height: 58vh;
+        height: 63vh;
+    }
+
+    html .main .worksView .work-container .work-image img {
+      border: none;
     }
 
     html .main .work-container.home-work-container .work-image {
-        height: 64vh;
+        height: 65vh;
+    }
+
+    html .main .worksView .work-container .inner-work-container .details {
+        margin-top: 0;
     }
 }
 
 @media (min-width: 1601px) {
     html .main .worksView .work-container {
-        height: 71vh;
+        height: 77vh;
     }
 
     html .main .worksView .work-container .work-image {
-        height: 64vh;
+        height: 70vh;
     }
 
     html .main .work-container.home-work-container .work-image {
-        height: 71vh;
+        height: 70vh;
     }
 }
 
@@ -274,7 +312,7 @@ footer .footer-text {
 .main .works-list-view .inner-work-container {
     padding: 2vw;
     margin: 0.5vw;
-    background-color: rgb(200, 200, 200);
+    background-color: #BBB;
     float: left;
     cursor: pointer;
 }
@@ -282,9 +320,26 @@ footer .footer-text {
 .main .works-list-view .work-image {
     height: 18.65vw;
     width: 18.65vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+.main .works-list-view .work-image img {
+  max-height: 16.65vw;
+  max-width: 16.65vw;
+  margin: auto;
+  display: block;
+  border: 1vh solid #FFF;
+}
+
+.main .works-list-view h4 {
+    margin: 2px 0 15px;
+}
+
+.main .works-list-view p {
+    margin: 5px 0;
+}
+
+.main .works-list-view p:last-of-type{
+    margin-bottom: 0;
 }
 
 
@@ -318,10 +373,11 @@ footer .footer-text {
 .artist-container {
     text-align: left;
     margin: 2% 3%;
+    max-width: 1100px;
 }
 
 .artist-container .artist-image {
-    background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13557717_10208013420765919_8298222914674521258_n.jpg?oh=f5f047b964ebd414238e7835ab0d803c&oe=58109679');
+    background-image: url('/images/kalina.jpg');
     height: 200px;
     width: 200px;
     margin: 0 25px 25px 0;
@@ -332,11 +388,29 @@ footer .footer-text {
 }
 
 .artist-container .artist-list,
-.artist-container .artist-text {
+.artist-container .artist-text,
+.artist-container .artist-quotation,
+.artist-container .artist-quotation-source {
     line-height: 1.5em;
 }
 
-.artist-container ul:last-of-type {
+.artist-container .artist-quotation,
+.artist-container .artist-quotation-source {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.artist-container .artist-quotation {
+    font-style: italic;
+}
+
+
+.artist-container .artist-quotation-source {
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.artist-container p:last-of-type {
     padding-bottom: 20px;
 }
 

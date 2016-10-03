@@ -62,11 +62,24 @@
     <script src="controllers/home-controller.js"></script>
     <script src="controllers/works-controller.js"></script>
     <script src="controllers/search-controller.js"></script>
+    <script src="controllers/work-details-controller.js"></script>
     <!-- Loading services -->
     <script src="services/works-service.js"></script>
     <script src="services/data-service.js"></script>
     <script>
     $(document).ready(function() {
+        var currentUrl = window.location.href;
+        if (currentUrl.indexOf('#/theartist') > -1 || currentUrl.indexOf('#/search') > -1) {
+            $('footer').css('position', 'static');
+        } else {
+            $('footer').css('position', '');
+        }
+
+        $('.header-name').on('click', function(e) {
+            $('footer').css('position', '');
+            $('.activeMenuItem').removeClass('activeMenuItem');
+        });
+
         $("#menu").kendoMenu({
             dataSource: [{
                 text: "Ex Libris",
@@ -84,9 +97,9 @@
                 text: "Drawings",
                 url: "#/works/drawings"
             }, {
-                text: "The Process",
-                url: "#/theprocess"
-            }, {
+            //     text: "The Process",
+            //     url: "#/theprocess"
+            // }, {
                 text: "The Artist",
                 url: "#/theartist"
             }],
@@ -96,10 +109,19 @@
                 $('#menu').removeClass('openedMenu');
                 $('#menu').addClass('closedMenu');
                 $('.sandwich').removeClass('open');
+
+                var selectedItemText = $(e.item).text();
+                if (selectedItemText === 'The Artist') {
+                    $('footer').css('position', 'static');
+                } else {
+                    $('footer').css('position', '');
+                }
             }
         });
 
         $('.searchbox').on('input', function(e) {
+            $('footer').css('position', 'static');
+            $('.activeMenuItem').removeClass('activeMenuItem');
             var text = e.target.value;
             window.location.replace('#/search/' + text);
         });

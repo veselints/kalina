@@ -21,6 +21,11 @@
         controller: 'SearchController',
         controllerAs: CONTROLLER_AS_VM
       })
+      .when('/workdetails/:workid', {
+        templateUrl: PARTIALS_PREFIX + 'workdetails.html',
+        controller: 'WorkDetailsController',
+        controllerAs: CONTROLLER_AS_VM
+      })
       .when('/theprocess', {
         templateUrl: PARTIALS_PREFIX + 'process.html'
       })

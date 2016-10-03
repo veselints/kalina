@@ -8,6 +8,7 @@
 
     vm.works = worksService.getWorksByCategory(currentCategory);
     vm.currentWork = vm.works[index];
+
     vm.showWork = false;
     $timeout(function() {
       vm.showWork = true;
@@ -43,7 +44,6 @@
           vm.showWork = true;
         }, 500);
       }, 1000);
-
     };
   }
 

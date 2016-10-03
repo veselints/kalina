@@ -1,6 +1,5 @@
 <div class="worksView">
-    <p ng-click="vm.openPrev()" class="landscape-prev">previous</p>
-    <div class="work-container observable" ng-click="vm.openNext()">
+    <div class="work-container observable">
         <div class="inner-work-container fade" ng-if="vm.showWork">
             <div class="work-image">
                 <img class="image-image" src="{{vm.currentWork.url}}">
@@ -13,8 +12,6 @@
             </div>
         </div>
     </div>
-    <p ng-click="vm.openPrev()" class="portrait-mobile-prev">previous</p>
-    <p ng-click="vm.openNext()" class="next">next</p>
     <script type="text/javascript">
         var target = $('.observable')[0];
         
