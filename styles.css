@@ -71,6 +71,19 @@ header {
     font-size: 2em;
 }
 
+.top-header .header-name .logo {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/logo3.png');
+    height: 45px;
+    width: 30px;
+    margin-bottom: -12px;
+    // -webkit-filter: drop-shadow(1px 1px 1px #777);
+    // filter: drop-shadow(1px 1px 1px #777); 
+}
+
 .top-header .header-name span {
     font-weight: 900;
 }
