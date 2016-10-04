@@ -528,6 +528,9 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html nav .search {
         display: none;
     }
+    html .top-header {
+        width: 100%;
+    }
     html .top-header .header-name {
         vertical-align: middle;
         width: 60%;
@@ -620,15 +623,24 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html .main .worksView {
         margin-bottom: 30px;
     }
+
     html .main .worksView .work-container {
-        width: 88%;
-        height: 95vw;
-        padding: 0 30px;
+        width: 82%;
+        height: 100vw;
+        padding: 0;
         margin-bottom: 0;
     }
+
     html .main .worksView .work-container .work-image {
         height: 80vw;
+        width: 92%;
     }
+
+    html .main .worksView .work-container .work-image img {
+        max-height: 100%;
+        max-width: 85%;
+    }
+
     html .main .worksView>p {
         padding: 16px;
         width: 12%;
