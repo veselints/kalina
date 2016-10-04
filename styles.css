@@ -447,11 +447,10 @@ only screen and (-o-min-device-pixel-ratio: 13/10) and (orientation: landscape) 
 only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px) {
     html body {
         font-size: 14px;
-        //background-color: red;
     }
-    // html footer {
-    //     position: static;
-    // }
+    html footer {
+        position: static;
+    }
     html nav .search {
         display: none;
     }
@@ -463,7 +462,7 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
     html .top-header {
         width: 100%;
         border-bottom: 0.5px solid #DDD;
-        padding-bottom: 10px;
+        padding: 20px 0 10px;
     }
 
     // html .top-header .header-name .logo {
@@ -482,13 +481,14 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
     html .top-header .header-name {
         vertical-align: middle;
         font-size: 2em;
+        width: 25%;
     }
     html .top-header .search {
         display: inline-block;
         vertical-align: middle;
         margin: 0;
         width: 25%;
-        float: right;
+        margin-left: 49.5%;
     }
     html nav .k-widget.k-menu-horizontal {
         width: 100%;
@@ -507,7 +507,7 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
         width: 8%;
     }
     html .main .work-container.home-work-container {
-        height: 43vw;
+        height: 49vw;
         margin-top: 5px;
     }
     html .main .work-container.home-work-container .work-image {
