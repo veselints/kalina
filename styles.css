@@ -633,7 +633,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
 
     html .main .worksView .work-container .work-image {
         height: 80vw;
-        width: 92%;
+        width: 100%;
     }
 
     html .main .worksView .work-container .work-image img {
