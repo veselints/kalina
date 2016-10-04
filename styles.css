@@ -437,6 +437,12 @@ footer .footer-text {
 }
 
 
+// styling details view
+.main .worksView.work-details .work-container {
+    cursor: none;
+}
+
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px),
 only screen and (-o-min-device-pixel-ratio: 13/10) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px),
@@ -715,11 +721,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     }
     html .main .worksView .work-container {
         width: 90%;
-        // height: 95vw;
     }
-    // html .main .worksView .work-container .work-image {
-    //     height: 80vh;
-    // }
     html .main .worksView>p {
         padding: 16px;
         width: 16%;
