@@ -80,8 +80,6 @@ header {
     height: 45px;
     width: 30px;
     margin-bottom: -12px;
-    // -webkit-filter: drop-shadow(1px 1px 1px #777);
-    // filter: drop-shadow(1px 1px 1px #777); 
 }
 
 .top-header .header-name span {
@@ -449,23 +447,48 @@ only screen and (-o-min-device-pixel-ratio: 13/10) and (orientation: landscape) 
 only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-device-width: 768px) and (max-device-width: 1280px) {
     html body {
         font-size: 14px;
+        //background-color: red;
     }
-    html footer {
-        position: static;
-    }
+    // html footer {
+    //     position: static;
+    // }
     html nav .search {
         display: none;
     }
+
+    html header {
+        border-bottom: 0;
+    }
+
+    html .top-header {
+        width: 100%;
+        border-bottom: 0.5px solid #DDD;
+        padding-bottom: 10px;
+    }
+
+    // html .top-header .header-name .logo {
+    //     height: 40px;
+    //     width: 26px;
+    // }
+
+    html nav {
+        width: 100%;
+    }
+
+    html nav .k-widget.k-menu-horizontal>.k-item {
+        width: 125px;
+    }
+
     html .top-header .header-name {
         vertical-align: middle;
-        width: 60%;
-        font-size: 2.5em;
+        font-size: 2em;
     }
     html .top-header .search {
         display: inline-block;
         vertical-align: middle;
         margin: 0;
-        width: 39.2%;
+        width: 25%;
+        float: right;
     }
     html nav .k-widget.k-menu-horizontal {
         width: 100%;
@@ -475,6 +498,7 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
         width: 60%;
         padding: 0 30px 20px;
     }
+
     html .main .worksView .work-container .work-image {
         height: 38vw;
     }
@@ -484,6 +508,7 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
     }
     html .main .work-container.home-work-container {
         height: 43vw;
+        margin-top: 5px;
     }
     html .main .work-container.home-work-container .work-image {
         height: 40vw;
