@@ -76,7 +76,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('/images/logo3.png');
+    background-image: url('./images/logo3.png');
     height: 45px;
     width: 30px;
     margin-bottom: -12px;
@@ -390,7 +390,7 @@ footer .footer-text {
 }
 
 .artist-container .artist-image {
-    background-image: url('/images/kalina.jpg');
+    background-image: url('./images/kalina.jpg');
     height: 200px;
     width: 200px;
     margin: 0 25px 25px 0;
