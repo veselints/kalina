@@ -3,6 +3,14 @@
 
   function worksService(data) {
     var works = [{
+      name: 'Summer',
+      url: 'works/watercolor/Summer.jpg',
+      technique: 'Watercolour',
+      year: '2016',
+      category: 'watercolor',
+      size: '49x58cm',
+      id: '0'
+    }, {
       name: 'Feelings and Thoughts',
       url: 'works/drawings/FeelingsAndThoughts.jpg',
       technique: 'Colour pencil drawing',
@@ -10,6 +18,14 @@
       category: 'drawings',
       size: '70x100cm',
       id: '1'
+    }, {
+      name: 'Winter',
+      url: 'works/exlibris/Winter.jpg',
+      technique: 'Ex libris',
+      year: '2016',
+      category: 'exlibris',
+      size: '13.5x19cm',
+      id: '15'
     }, {
       name: 'Melancholy',
       url: 'works/drawings/Melancholy.jpg',
@@ -27,20 +43,12 @@
       size: '100x70cm',
       id: '3'
     }, {
-      name: 'Aldo Manuzio',
-      url: 'works/exlibris/AldoManuzio.jpg',
-      technique: 'Ex libris C3C5',
-      year: '2015',
-      category: 'exlibris',
-      size: '11x11cm',
-      id: '4'
-    }, {
       name: 'Bella Italia',
       url: 'works/exlibris/BellaItalia.jpg',
       technique: 'Ex libris',
       year: '2016',
       category: 'exlibris',
-      size: 'TBS',
+      size: '13,5x19cm',
       id: '5'
     }, {
       name: 'Feelings',
@@ -106,21 +114,21 @@
       category: 'exlibris',
       size: '10x12cm',
       id: '14'
-    }, {
-      name: 'Winter',
-      url: 'works/exlibris/Winter.jpg',
-      technique: 'Ex libris',
-      year: '2016',
+    },{
+      name: 'Aldo Manuzio',
+      url: 'works/exlibris/AldoManuzio.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2015',
       category: 'exlibris',
-      size: 'TBS',
-      id: '15'
+      size: '11x11cm',
+      id: '4'
     }, {
       name: 'Autumn',
       url: 'works/freeetchings/Autumn.jpg',
       technique: 'Free etching',
       year: '2016',
       category: 'freeetchings',
-      size: 'TBS',
+      size: '25x29cm',
       id: '16'
     }, {
       name: 'Babylon I',
@@ -192,7 +200,7 @@
       technique: 'Free etching',
       year: '2016',
       category: 'freeetchings',
-      size: 'TBS',
+      size: '50x50cm',
       id: '25'
     }, {
       name: 'Thracian Ritual',
