@@ -1,0 +1,32 @@
+{
+  "name": "kalina",
+  "version": "1.0.0",
+  "description": "Kalina Kraleva web site",
+  "main": "web.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veselints/kalina.git"
+  },
+  "keywords": [
+    "kalina",
+    "kraleva",
+    "drawings",
+    "watercolor",
+    "etchings",
+    "ex-libris",
+    "artist"
+  ],
+  "author": "veselin tsvetanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veselints/kalina/issues"
+  },
+  "homepage": "https://github.com/veselints/kalina#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gzippo": "^0.2.0"
+  }
+}
