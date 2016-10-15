@@ -18,6 +18,7 @@ body {
 a {
     text-decoration: none;
     color: black;
+    outline: 0;
 }
 
 .clearfix:after {
@@ -97,24 +98,27 @@ nav {
     width: 79.5%;
 }
 
-nav .k-widget.k-menu-horizontal {
+nav #menu {
     display: inline-block;
     vertical-align: middle;
-    background-color: transparent;
+    background-color: #EEE;
 }
 
-nav .k-widget.k-menu-horizontal>.k-item {
-    width: 130px;
+nav #menu>a {
+    display: inline-block;
+    width: 135px;
+    padding: 10px;
+    outline: 0;
 }
 
-nav .k-widget.k-menu-horizontal>.k-item.k-state-hover {
+nav #menu>a:hover {
     background-color: #F8F8F8;
 }
 
-nav .k-widget.k-menu-horizontal>.k-item.activeMenuItem a {
+nav #menu>a:active,
+nav #menu>a.activeMenuItem {
     color: #F66;
     font-weight: 600;
-    // padding: 1em 0.8em;
 }
 
 
@@ -124,25 +128,35 @@ nav .search {
     display: inline-block;
     vertical-align: middle;
     float: right;
-    margin-top: 8px;
+    margin: 3px;
     //margin-left: 13%;
     width: 13.5%;
 }
 
-nav .search .k-textbox,
-.top-header .search .k-textbox {
+nav .search input,
+.top-header .search input {
     width: 100%;
     font-style: italic;
     font-size: 0.8em;
     background-color: transparent;
+    color: #32364c;
+    height: 2.694em;
+    text-indent: .8em;
+    line-height: 1.6em;
+    padding: 2px .3em;
+    border-radius: 3px;
+    outline: 0;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #e0e0e0;
 }
 
-nav .search .k-textbox:active,
-.top-header .search .k-textbox:active,
-nav .search .k-textbox:hover,
-.top-header .search .k-textbox:hover,
-nav .search .k-textbox:focus,
-.top-header .search .k-textbox:focus {
+nav .search input:active,
+.top-header .search input:active,
+nav .search input:hover,
+.top-header .search input:hover,
+nav .search input:focus,
+.top-header .search input:focus {
     background-color: #F8F8F8;
 }
 
@@ -474,8 +488,9 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
         width: 100%;
     }
 
-    html nav .k-widget.k-menu-horizontal>.k-item {
+    html nav #menu>a {
         width: 125px;
+        outline: 0;
     }
 
     html .top-header .header-name {
@@ -490,7 +505,7 @@ only screen and (min-resolution: 120dpi) and (orientation: landscape) and (min-d
         width: 25%;
         margin-left: 49.5%;
     }
-    html nav .k-widget.k-menu-horizontal {
+    html nav #menu {
         width: 100%;
     }
     html .main .worksView .work-container {
@@ -542,7 +557,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         margin: 0;
         width: 32%;
     }
-    html nav .k-widget.k-menu-horizontal {
+    html nav #menu {
         width: 45%;
         height: 1600px;
         position: fixed;
@@ -552,15 +567,15 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         box-shadow: -5px 0 10px 0.5px rgb(50, 50, 50);
         z-index: 50;
     }
-    html nav .k-widget.k-menu-horizontal.openedMenu {
+    html nav #menu.openedMenu {
         right: 0;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal.closedMenu {
+    html nav #menu.closedMenu {
         right: -50%;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal>.k-item {
+    html nav #menu>a {
         width: 100%;
     }
     /* Styling sandwich icon */
@@ -678,7 +693,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html .top-header .search {
         display: none;
     }
-    html nav .k-widget.k-menu-horizontal {
+    html nav #menu {
         width: 45%;
         height: 1000px;
         position: fixed;
@@ -687,15 +702,15 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         padding-top: 60px;
         box-shadow: -5px 0 10px 0.5px rgb(50, 50, 50);
     }
-    html nav .k-widget.k-menu-horizontal.openedMenu {
+    html nav #menu.openedMenu {
         right: 0;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal.closedMenu {
+    html nav #menu.closedMenu {
         right: -50%;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal>.k-item {
+    html nav #menu>a {
         width: 100%;
     }
     /* Styling sandwich icon */
@@ -796,7 +811,7 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
     html .top-header .search {
         display: none;
     }
-    html nav .k-widget.k-menu-horizontal {
+    html nav #menu {
         width: 45%;
         height: 1000px;
         position: fixed;
@@ -806,15 +821,15 @@ only screen and (min-resolution: 120dpi) and (orientation: portrait) and (min-de
         box-shadow: -5px 0 10px 0.5px rgb(50, 50, 50);
         z-index: 50;
     }
-    html nav .k-widget.k-menu-horizontal.openedMenu {
+    html nav #menu.openedMenu {
         right: 0;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal.closedMenu {
+    html nav #menu.closedMenu {
         right: -50%;
         transition: 1s;
     }
-    html nav .k-widget.k-menu-horizontal>.k-item {
+    html nav #menu>a {
         width: 100%;
     }
     /* Styling sandwich icon */

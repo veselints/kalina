@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> </title>
     <!-- Loading styles -->
-    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.common-nova.min.css" />
-    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.nova.min.css" />
-    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.607/styles/kendo.default.mobile.min.css" />
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -32,7 +29,15 @@
             </div>
         </div>
         <nav>
-            <ul id="menu"></ul>
+            <div id="menu">
+                <a href="#/works/exlibris">Ex Libris</a>
+                <a href="#/works/freeetchings">Free etchings</a>
+                <a href="#/works/smalletchings">Small etchings</a>
+                <a href="#/works/watercolor">Watercolour</a>
+                <a href="#/works/drawings">Drawings</a>
+                <!-- <a href="#/theprocess">The Process</a> -->
+                <a href="#/theartist">The Artist</a>
+            </div>
             <div class="search">
                 <input type="text" class="k-textbox searchbox" placeholder="Find work..." />
             </div>
@@ -50,11 +55,10 @@
         </p>
     </footer>
     <!-- Loding libs -->
-    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
-    <script src="http://kendo.cdn.telerik.com/2016.2.607/js/kendo.ui.core.min.js"></script>
     <!-- Loading app -->
     <script src="app.js"></script>
     <!-- Loading controllers -->
@@ -71,36 +75,12 @@
             $('.activeMenuItem').removeClass('activeMenuItem');
         });
 
-        $("#menu").kendoMenu({
-            dataSource: [{
-                text: "Ex Libris",
-                url: "#/works/exlibris"
-            }, {
-                text: "Free etchings",
-                url: "#/works/freeetchings"
-            }, {
-                text: "Small etchings",
-                url: "#/works/smalletchings"
-            }, {
-                text: "Watercolour",
-                url: "#/works/watercolor"
-            }, {
-                text: "Drawings",
-                url: "#/works/drawings"
-            }, {
-            //     text: "The Process",
-            //     url: "#/theprocess"
-            // }, {
-                text: "The Artist",
-                url: "#/theartist"
-            }],
-            select: function(e) {
-                $('.activeMenuItem').removeClass('activeMenuItem');
-                $(e.item).addClass('activeMenuItem');
-                $('#menu').removeClass('openedMenu');
-                $('#menu').addClass('closedMenu');
-                $('.sandwich').removeClass('open');
-            }
+        $('#menu>a').on('click', function(e) {
+            $('.activeMenuItem').removeClass('activeMenuItem');
+            $(e.target).addClass('activeMenuItem');
+            $('#menu').removeClass('openedMenu');
+            $('#menu').addClass('closedMenu');
+            $('.sandwich').removeClass('open');
         });
 
         $('.searchbox').on('input', function(e) {
