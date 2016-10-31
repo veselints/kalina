@@ -139,13 +139,21 @@
       size: '20x29cm',
       id: '17'
     }, {
+      name: 'Babylon II',
+      url: 'works/freeetchings/BabylonII.jpg',
+      technique: 'Free etching C3C5',
+      year: '2011',
+      category: 'freeetchings',
+      size: '20x29cm',
+      id: '18'
+    }, {
       name: 'Dandelion',
       url: 'works/freeetchings/Dandelion.jpg',
       technique: 'Free etching C3C5',
       year: '2012',
       category: 'freeetchings',
       size: '19x29cm',
-      id: '18'
+      id: '19'
     }, {
       name: 'Enigma',
       url: 'works/freeetchings/Enigma.jpg',
@@ -153,7 +161,7 @@
       year: '2012',
       category: 'freeetchings',
       size: '17x38cm',
-      id: '19'
+      id: '20'
     }, {
       name: 'Labyrinth',
       url: 'works/freeetchings/Labyrinth.jpg',
@@ -161,7 +169,7 @@
       year: '2012',
       category: 'freeetchings',
       size: '20x29cm',
-      id: '20'
+      id: '21'
     }, {
       name: 'Landscape',
       url: 'works/freeetchings/Landscape.jpg',
@@ -169,7 +177,7 @@
       year: '2008',
       category: 'freeetchings',
       size: '34x40cm',
-      id: '21'
+      id: '22'
     }, {
       name: 'Sacred Image I',
       url: 'works/freeetchings/SacredImageI.jpg',
@@ -177,7 +185,7 @@
       year: '2012',
       category: 'freeetchings',
       size: '39x59cm',
-      id: '22'
+      id: '23'
     }, {
       name: 'Sacred Image II',
       url: 'works/freeetchings/SacredImageII.jpg',
@@ -185,15 +193,39 @@
       year: '2012',
       category: 'freeetchings',
       size: '59x39cm',
-      id: '23'
+      id: '24'
     }, {
+      name: 'Sacred Image III',
+      url: 'works/freeetchings/SacredImageIII.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '39x59cm',
+      id: '25'
+    },{
       name: 'Sea',
       url: 'works/freeetchings/Sea.jpg',
       technique: 'Free etching C3C5',
       year: '2011',
       category: 'freeetchings',
       size: '30x40cm',
-      id: '24'
+      id: '26'
+    }, {
+      name: 'Forest',
+      url: 'works/freeetchings/ForestL.jpg',
+      technique: 'Free etching C3C5',
+      year: '2011',
+      category: 'freeetchings',
+      size: '30x40cm',
+      id: '27'
+    }, {
+      name: 'Field',
+      url: 'works/freeetchings/Field.jpg',
+      technique: 'Free etching C3C5',
+      year: '2011',
+      category: 'freeetchings',
+      size: '30x40cm',
+      id: '28'
     }, {
       name: 'Seasons',
       url: 'works/freeetchings/Seasons.jpg',
@@ -201,7 +233,7 @@
       year: '2016',
       category: 'freeetchings',
       size: '50x50cm',
-      id: '25'
+      id: '29'
     }, {
       name: 'Thracian Ritual',
       url: 'works/freeetchings/ThracianRitual.jpg',
@@ -209,7 +241,7 @@
       year: '2010',
       category: 'freeetchings',
       size: '44x59cm',
-      id: '26'
+      id: '30'
     }, {
       name: 'Womb',
       url: 'works/freeetchings/Womb.jpg',
@@ -217,7 +249,7 @@
       year: '2012',
       category: 'freeetchings',
       size: '44x51cm',
-      id: '27'
+      id: '31'
     }, {
       name: 'Forest II',
       url: 'works/smalletchings/ForestII.jpg',
@@ -225,7 +257,7 @@
       year: '2010',
       category: 'smalletchings',
       size: '10x10cm',
-      id: '28'
+      id: '32'
     }, {
       name: 'Love Is on the Top of a Needle',
       url: 'works/smalletchings/LoveIsOnTheTopOfANeedle.jpg',
@@ -233,14 +265,15 @@
       year: '2015',
       category: 'smalletchings',
       size: '13x16cm',
-      id: '29'
+      id: '33'
     }, {
       name: 'Medea I',
       url: 'works/smalletchings/MedeaI.jpg',
       technique: 'Small etching C3C5',
       year: '2013',
       category: 'smalletchings',
-      size: '16x21cm'
+      size: '16x21cm',
+      id: '34'
     }, {
       name: 'Medea II',
       url: 'works/smalletchings/MedeaII.jpg',
@@ -248,7 +281,7 @@
       year: '2013',
       category: 'smalletchings',
       size: '16x21cm',
-      id: '30'
+      id: '35'
     }, {
       name: 'Medea III',
       url: 'works/smalletchings/MedeaIII.jpg',
@@ -256,7 +289,7 @@
       year: '2015',
       category: 'smalletchings',
       size: '16x22cm',
-      id: '31'
+      id: '36'
     }, {
       name: 'The Rose of War',
       url: 'works/smalletchings/TheRoseOfWar.jpg',
@@ -264,7 +297,7 @@
       year: '2015',
       category: 'smalletchings',
       size: '15x15cm',
-      id: '32'
+      id: '37'
     }, {
       name: 'War',
       url: 'works/smalletchings/War.jpg',
@@ -272,7 +305,7 @@
       year: '2015',
       category: 'smalletchings',
       size: '15x15cm',
-      id: '34'
+      id: '38'
     }, {
       name: 'Flower of Art',
       url: 'works/watercolor/FlowerOfArt.jpg',
@@ -280,7 +313,7 @@
       year: '2015',
       category: 'watercolor',
       size: '40x50cm',
-      id: '35'
+      id: '39'
     }, {
       name: 'In Vino Veritas',
       url: 'works/watercolor/InVinoVeritas.jpg',
@@ -288,7 +321,7 @@
       year: '2013',
       category: 'watercolor',
       size: '35x44cm',
-      id: '36'
+      id: '40'
     }, {
       name: 'Sunflowers',
       url: 'works/watercolor/Sunflowers.jpg',
@@ -296,7 +329,7 @@
       year: '2013',
       category: 'watercolor',
       size: '100x70cm',
-      id: '37'
+      id: '41'
     }, {
       name: "Shepherdess Leading to Noah's Ark",
       url: 'works/exlibris/ShepherdessLeadingToNoahsArk.jpg',
@@ -304,7 +337,23 @@
       year: '2013',
       category: 'exlibris',
       size: '16x21cm',
-      id: '13'
+      id: '42'
+    }, {
+      name: 'Memento Mori',
+      url: 'works/freeetchings/MementoMori.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '20x30cm',
+      id: '43'
+    }, {
+      name: 'Nocturno',
+      url: 'works/freeetchings/Nocturno.jpg',
+      technique: 'Free etching C3C5',
+      year: '2012',
+      category: 'freeetchings',
+      size: '21x30cm',
+      id: '44'
     }];
 
 
