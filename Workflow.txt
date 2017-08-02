@@ -1,0 +1,13 @@
+implement changes
+
+git add .
+
+git commit -m [........]
+
+git push origin master
+
+git push heroku master
+
+heroku ps:scale web=1
+
+heroku open
