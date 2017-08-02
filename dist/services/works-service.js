@@ -364,7 +364,7 @@
       id: '44'
     },{
       name: 'Caryatides',
-      url: 'works/exlibris/Summer.jpg',
+      url: 'works/freeetchings/Caryatides.jpg',
       technique: 'Free etching C3C5',
       year: '2016',
       category: 'freeetchings',
