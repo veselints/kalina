@@ -9,7 +9,7 @@
       year: '2016',
       category: 'watercolor',
       size: '49x58cm',
-      id: '0'
+      id: '46'
     }, {
       name: 'Feelings and Thoughts',
       url: 'works/drawings/FeelingsAndThoughts.jpg',
@@ -26,6 +26,14 @@
       category: 'exlibris',
       size: '13.5x19cm',
       id: '15'
+    }, {
+      name: 'Summer',
+      url: 'works/exlibris/Summer.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2017',
+      category: 'exlibris',
+      size: '13.5x19cm',
+      id: '45'
     }, {
       name: 'Melancholy',
       url: 'works/drawings/Melancholy.jpg',
@@ -354,6 +362,14 @@
       category: 'freeetchings',
       size: '21x30cm',
       id: '44'
+    },{
+      name: 'Caryatides',
+      url: 'works/exlibris/Summer.jpg',
+      technique: 'Free etching C3C5',
+      year: '2016',
+      category: 'freeetchings',
+      size: '40x50cm',
+      id: '47'
     }];
 
 
