@@ -370,7 +370,17 @@
       category: 'freeetchings',
       size: '40x50cm',
       id: '47'
+    },{
+      name: 'Night And Day',
+      url: 'works/watercolor/NightAndDay.jpg',
+      technique: 'Watercolor',
+      year: '2017',
+      category: 'watercolor',
+      size: '70x100cm',
+      id: '48'
     }];
+
+
 
 
     function getCurrentWork() {
