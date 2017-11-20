@@ -380,7 +380,7 @@
       id: '48'
     },{
       name: 'Seasons Of A Tree',
-      url: 'works/watercolor/SeasonsOfATree.jpg',
+      url: 'works/watercolor/SeasonsOfATree.JPG',
       technique: 'Watercolor',
       year: '2017',
       category: 'watercolor',
