@@ -378,10 +378,23 @@
       category: 'watercolor',
       size: '70x100cm',
       id: '48'
+    },{
+      name: 'Seasons Of A Tree',
+      url: 'works/watercolor/SeasonsOfATree.jpg',
+      technique: 'Watercolor',
+      year: '2017',
+      category: 'watercolor',
+      size: '40x60cm',
+      id: '49'
+    },{
+      name: 'Winter Mood',
+      url: 'works/watercolor/WinterMood.jpg',
+      technique: 'Watercolor',
+      year: '2017',
+      category: 'watercolor',
+      size: '50x54cm',
+      id: '50'
     }];
-
-
-
 
     function getCurrentWork() {
       var random = Math.floor(Math.random() * (35));
