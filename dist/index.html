@@ -8,41 +8,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kalina Kraleva Site. About the Artist and Her Works.">
 
-    <!-- <base href="/" > -->
+    <base href="/" >
     <!-- Loading styles -->
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body ng-app="kalinaApp" ng-cloak>
     <!-- Header -->
-    <header>
+    <header ng-controller="NavigationController">
         <div class="top-header">
             <h1 class="header-name">
                 <a href="/home">
                     <span class="logo"></span>
                     Kalina Kraleva
-                    
-                    <a class="sandwich">
+                    <a class="sandwich" ng-click="menuItemCick()" ng-class="{ 'open': menuOpened }">
                         <div></div>
                     </a>
                 </a>
             </h1>
-            <div class="search">
-                <input type="text" class="k-textbox searchbox" placeholder="Find work..." />
+            <div class="search" >
+                <input type="text" class="k-textbox searchbox" placeholder="Find work..." ng-model="text" ng-change="search()" />
             </div>
         </div>
         <nav>
-            <div id="menu">
-                <a href="#/works/exlibris">Ex Libris</a>
-                <a href="#/works/freeetchings">Free etchings</a>
-                <a href="#/works/smalletchings">Small etchings</a>
-                <a href="#/works/watercolor">Watercolour</a>
-                <a href="#/works/drawings">Drawings</a>
-                <!-- <a href="#/theprocess">The Process</a> -->
-                <a href="#/theartist">The Artist</a>
+            <div id="menu" ng-class="{ 'openedMenu': menuOpened, closedMenu: !menuOpened }" ng-click="menuItemCick()">
+                <a href="/works/exlibris" ng-class="{ 'activeMenuItem': currentView == 'exlibris' }">Ex Libris</a>
+                <a href="/works/freeetchings" ng-class="{ 'activeMenuItem': currentView == 'freeetchings' }">Free etchings</a>
+                <a href="/works/smalletchings" ng-class="{ 'activeMenuItem': currentView == 'smalletchings' }">Small etchings</a>
+                <a href="/works/watercolor" ng-class="{ 'activeMenuItem': currentView == 'watercolor' }">Watercolour</a>
+                <a href="/works/drawings" ng-class="{ 'activeMenuItem': currentView == 'drawings' }">Drawings</a>
+                <!-- <a href="/theprocess" ng-class="{ 'activeMenuItem': currentView == 'theprocess' }">The Process</a> -->
+                <a href="/theartist" ng-class="{ 'activeMenuItem': currentView == 'theartist' }">The Artist</a>
             </div>
             <div class="search">
-                <input type="text" class="k-textbox searchbox" placeholder="Find work..." />
+                <input type="text" class="k-textbox searchbox" placeholder="Find work..." ng-model="text" ng-change="search()" />
             </div>
         </nav>
     </header>
@@ -69,43 +68,10 @@
     <script src="controllers/works-controller.js"></script>
     <script src="controllers/search-controller.js"></script>
     <script src="controllers/work-details-controller.js"></script>
+    <script src="controllers/navigation-controller.js"></script>
     <!-- Loading services -->
     <script src="services/works-service.js"></script>
     <script src="services/data-service.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.header-name').on('click', function(e) {
-            $('.activeMenuItem').removeClass('activeMenuItem');
-        });
-
-        $('#menu>a').on('click', function(e) {
-            $('.activeMenuItem').removeClass('activeMenuItem');
-            $(e.target).addClass('activeMenuItem');
-            $('#menu').removeClass('openedMenu');
-            $('#menu').addClass('closedMenu');
-            $('.sandwich').removeClass('open');
-        });
-
-        $('.searchbox').on('input', function(e) {
-            $('.activeMenuItem').removeClass('activeMenuItem');
-            var text = e.target.value;
-            window.location.replace('#/search/' + text);
-        });
-
-        $('.sandwich').on('click', function(e) {
-            var menu = $('#menu');
-            if (menu.hasClass('openedMenu')) {
-                menu.removeClass('openedMenu');
-                menu.addClass('closedMenu');
-                $('.sandwich').removeClass('open');
-            } else {
-                menu.removeClass('closedMenu');
-                menu.addClass('openedMenu');
-                $('.sandwich').addClass('open');
-            }
-        });
-    });
-    </script>
 </body>
 
 </html>

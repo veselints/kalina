@@ -5,6 +5,8 @@
     var PARTIALS_PREFIX = '/views/partials/';
     var CONTROLLER_AS_VM = 'vm';
 
+    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when('/', {
         templateUrl: PARTIALS_PREFIX + 'home.html',
