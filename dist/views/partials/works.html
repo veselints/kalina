@@ -3,7 +3,7 @@
     <div ng-repeat="work in vm.works">
         <div class="inner-work-container" ng-click="vm.loadWork(work.id)">
             <div class="work-image">
-                <img class="image-image" ng-src="{{work.url}}">
+                <img class="image-image" ng-src="{{work.url}}" alt="Kalina Kraleva {{vm.work.name}}">
             </div>
             <h4 class="name">{{work.name}}</h4>
             <p class="technique">{{work.technique}}</p>

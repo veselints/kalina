@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  function config($routeProvider) {
-    var PARTIALS_PREFIX = 'views/partials/';
+  function config($routeProvider, $locationProvider) {
+    var PARTIALS_PREFIX = '/views/partials/';
     var CONTROLLER_AS_VM = 'vm';
 
     $routeProvider
@@ -42,8 +42,8 @@
   angular.module('theStyleApp.animations', []);
   angular.module('kalinaApp.controllers', ['kalinaApp.services', 'theStyleApp.animations']);
 
-  angular.module('kalinaApp', ['ngRoute', 'ngAnimate', 'kalinaApp.controllers']) //
-    .config(['$routeProvider', config])
+  angular.module('kalinaApp', ['ngRoute', 'ngAnimate', 'kalinaApp.controllers'])
+    .config(['$routeProvider', '$locationProvider', config])
     //.constant('baseServiceUrl', 'http://localhost:7777/api/'); // Chage this when you migrate to heroku
     .constant('baseServiceUrl', 'https://fast-badlands-79260.herokuapp.com/api/'); // Chage this when you migrate to heroku
 }());
