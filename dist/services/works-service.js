@@ -540,7 +540,7 @@
       var worksResult = [];
       for (var i = 0; i < works.length; i++) {
          var currentWork = works[i];
-         if (currentWork.category === category){
+         if (currentWork.category === category && currentWork.available){
           worksResult.push(currentWork);
          }
        }
@@ -553,6 +553,11 @@
       var text = searchText.toLowerCase();
       for (var i = 0; i < works.length; i++) {
          var currentWork = works[i];
+
+         if (!currentWork.available) {
+           continue;
+         }
+
          if (currentWork.category.toLowerCase().indexOf(text) > -1 ||
           currentWork.name.toLowerCase().indexOf(text) > -1 ||
           currentWork.year.toLowerCase().indexOf(text) > -1){
