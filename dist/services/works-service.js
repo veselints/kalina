@@ -522,7 +522,61 @@
       year: '2018',
       category: 'watercolor',
       size: '49x58cm',
-      id: '58',
+      id: '59',
+      available: true
+    },{
+      name: 'Wings Of Desire',
+      url: 'works/exlibris/WingsOfDesire.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2019',
+      category: 'exlibris',
+      size: '12x12cm',
+      id: '60',
+      available: true
+    },{
+      name: 'To Be Don Quixote',
+      url: 'works/exlibris/ToBeDonQuixote.jpg',
+      technique: 'Ex libris C3C5',
+      year: '2019',
+      category: 'exlibris',
+      size: '16x16cm',
+      id: '61',
+      available: true
+    },{
+      name: 'The Dream Of The Butterfly',
+      url: 'works/freeetchings/TheDreamOfTheButterfly.jpg',
+      technique: 'Free etching C3C5',
+      year: '2019',
+      category: 'freeetchings',
+      size: '28.5x41cm',
+      id: '62',
+      available: true
+    },{
+      name: 'Pulse Of The Sea',
+      url: 'works/freeetchings/PulseOfTheSea.jpg',
+      technique: 'Free etching C3C5',
+      year: '2019',
+      category: 'freeetchings',
+      size: '28.5x41cm',
+      id: '63',
+      available: true
+    },{
+      name: "Nature's Eye",
+      url: 'works/freeetchings/NaturesEye.jpg',
+      technique: 'Free etching C3C5',
+      year: '2019',
+      category: 'freeetchings',
+      size: '28x29.5cm',
+      id: '64',
+      available: true
+    },{
+      name: 'Midnight',
+      url: 'works/watercolor/Midnight.jpg',
+      technique: 'Watercolour',
+      year: '2019',
+      category: 'watercolor',
+      size: '55x75cm',
+      id: '65',
       available: true
     }];
 
