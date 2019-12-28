@@ -590,6 +590,7 @@
       return filtered[random];
     }
 
+    
     function getWorksByCategory(category) {
       var worksResult = works.filter(function(work){
         return work.category === category && work.available;
