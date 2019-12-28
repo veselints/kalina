@@ -590,7 +590,6 @@
       return filtered[random];
     }
 
-    
     function getWorksByCategory(category) {
       var worksResult = works.filter(function(work){
         return work.category === category && work.available;
@@ -610,8 +609,7 @@
          }
 
          if (currentWork.category.toLowerCase().indexOf(text) > -1 ||
-          currentWork.name.toLowerCase().indexOf(text) > -1 ||
-          currentWork.year.toLowerCase().indexOf(text) > -1){
+          currentWork.name.toLowerCase().indexOf(text) > -1){
             worksResult.push(currentWork);
          }
        }
