@@ -578,6 +578,15 @@
       size: '55x75cm',
       id: '65',
       available: true
+    },{
+      name: 'Spring',
+      url: 'works/exlibris/Spring.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2020,
+      category: 'exlibris',
+      size: '13.5x19cm',
+      id: '66',
+      available: true
     }];
 
     function getCurrentWork() {
