@@ -587,6 +587,24 @@
       size: '13.5x19cm',
       id: '66',
       available: true
+    },{
+      name: 'Hope for the Future',
+      url: 'works/exlibris/HopeForTheFuture.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2020,
+      category: 'exlibris',
+      size: '15x18.5cm',
+      id: '67',
+      available: true
+    },{
+      name: "Nature's Cry",
+      url: 'works/exlibris/NaturesCry.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2020,
+      category: 'exlibris',
+      size: '15x18.5cm',
+      id: '68',
+      available: true
     }];
 
     function getCurrentWork() {
