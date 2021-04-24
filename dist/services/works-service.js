@@ -605,6 +605,15 @@
       size: '15x18.5cm',
       id: '68',
       available: true
+    },{
+      name: "Life In Danger",
+      url: 'works/exlibris/LifeInDanger.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2021,
+      category: 'exlibris',
+      size: '15x18.5cm',
+      id: '69',
+      available: true
     }];
 
     function getCurrentWork() {
