@@ -614,6 +614,42 @@
       size: '15x18.5cm',
       id: '69',
       available: true
+    },{
+      name: "Aristotle And Plyllis",
+      url: 'works/exlibris/AristotleAndPlyllis.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2021,
+      category: 'exlibris',
+      size: '16x15cm',
+      id: '70',
+      available: true
+    },{
+      name: "Parisian Bohemia",
+      url: 'works/exlibris/ParisianBohemia.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2021,
+      category: 'exlibris',
+      size: '14x18cm',
+      id: '71',
+      available: true
+    },{
+      name: "Inferno E Paradiso",
+      url: 'works/exlibris/InfernoEParadiso.jpg',
+      technique: 'Ex libris C3C5',
+      year: 2021,
+      category: 'exlibris',
+      size: '11x13.5cm',
+      id: '72',
+      available: true
+    },{
+      name: "Beyond",
+      url: 'works/exlibris/Beyond.jpg',
+      technique: 'Watercolour',
+      year: 2021,
+      category: 'watercolor',
+      size: '55x65cm',
+      id: '73',
+      available: true
     }];
 
     function getCurrentWork() {
