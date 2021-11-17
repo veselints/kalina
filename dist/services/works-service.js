@@ -643,7 +643,7 @@
       available: true
     },{
       name: "Beyond",
-      url: 'works/exlibris/Beyond.jpg',
+      url: 'works/watercolor/Beyond.jpg',
       technique: 'Watercolour',
       year: 2021,
       category: 'watercolor',
