@@ -38,3 +38,8 @@ jspm_packages
 
 # Without libraries
 libs
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firebase-debug.*.log*
