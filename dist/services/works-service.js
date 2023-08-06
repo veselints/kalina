@@ -650,10 +650,37 @@
       size: '55x65cm',
       id: '73',
       available: true
-    }];
+    },{
+        name: "Autumn",
+        url: 'works/exlibris/Autumn_2022.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2022,
+        category: 'exlibris',
+        size: '13.5x17cm',
+        id: '74',
+        available: true
+      },{
+        name: "Spring",
+        url: 'works/exlibris/Spring_2023.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2023,
+        category: 'exlibris',
+        size: '13.5x17cm',
+        id: '75',
+        available: true
+      },{
+        name: "Time Traveler",
+        url: 'works/exlibris/TimeTraveler.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2022,
+        category: 'exlibris',
+        size: '14x13.5cm',
+        id: '76',
+        available: true
+      }];
 
     function getCurrentWork() {
-      var fromYear = (new Date().getFullYear()) - 3;
+      var fromYear = (new Date().getFullYear()) - 4;
       var filtered = works.filter(function(work){
         return work.year >= fromYear && work.available;
       });
