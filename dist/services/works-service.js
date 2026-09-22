@@ -677,6 +677,51 @@
         size: '14x13.5cm',
         id: '76',
         available: true
+      },{
+        name: "Summer Afternoon",
+        url: 'works/exlibris/Summer_Afternoon.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2023,
+        category: 'exlibris',
+        size: '13.5x17cm',
+        id: '77',
+        available: true
+      },{
+        name: "Winter",
+        url: 'works/exlibris/Winter_2023.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2023,
+        category: 'exlibris',
+        size: '13.5x17cm',
+        id: '78',
+        available: true
+      },{
+        name: "Landscape I",
+        url: 'works/exlibris/Landscape_I.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2023,
+        category: 'exlibris',
+        size: '12x12cm',
+        id: '79',
+        available: true
+      },{
+        name: "Landscape II",
+        url: 'works/exlibris/Landscape_II.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2023,
+        category: 'exlibris',
+        size: '12x12cm',
+        id: '80',
+        available: true
+      },{
+        name: "Bacchae",
+        url: 'works/exlibris/Bacchae.jpg',
+        technique: 'Ex libris C3C5',
+        year: 2024,
+        category: 'exlibris',
+        size: '13.5x17cm',
+        id: '81',
+        available: true
       }];
 
     function getCurrentWork() {
